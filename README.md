@@ -4,7 +4,7 @@
 	  Elorm @elormadjaho
 	  Claude @MrAyitey
 
-	
+
 	$ dev-conf objectives
 	  o A gathering event for local developers
 	  o Platform to speak and learn about new and trending technologies
