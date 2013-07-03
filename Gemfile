@@ -16,8 +16,18 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-# Monitor app performance with New Relic RPM
-gem 'newrelic_rpm'
+group :production do
+	# Monitor app performance with New Relic RPM
+	gem 'newrelic_rpm'
+end
+
+group :development, :test do
+	gem 'rspec-rails'
+end
+
+group :test do
+	gem 'capybara'
+end
 
 group :doc do
   gem 'sdoc', require: false
