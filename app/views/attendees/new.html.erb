@@ -1,0 +1,38 @@
+<h2>New attendee</h2>
+<%= form_for(@attendee) do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :website %><br>
+		<%= f.text_field :website, type: :url %>
+	</p>
+	<p>
+		<%= f.label :github %><br>
+		<%= f.text_field :github %>
+	</p>
+	<p>
+		<%= f.label :linkedin %><br>
+		<%= f.text_field :linkedin %>
+	</p>
+	<p>
+		<%= f.label :twitter %><br>
+		<%= f.text_field :twitter %>
+	</p>
+	<p>
+		<%= f.label :interests %><br>
+		<%= f.text_field :interests %>
+	</p>
+	<p>
+		<%= f.label :specialty %><br>
+		<%= f.text_field :specialty %>
+	</p>
+	<p>
+		<%= f.label :expectation %><br>
+		<%= f.text_area :expectation %>
+	</p>
+	<p>
+		<%= f.submit 'I am attending DevCongress so Sign me up!' %>
+	</p>
+<% end %>
