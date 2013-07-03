@@ -17,5 +17,9 @@ feature 'Signing Up an Attendee' do
 		click_button 'I am attending DevCongress so Sign me up!'
 
 		expect(page).to have_content 'Yay! You are definitely attending DevCongress :)'
+		expect(page.current_url).to eql(agenda_url)
+
+		title = 'Playground'
+		expect(page).to have_title(title)
 	end
 end
