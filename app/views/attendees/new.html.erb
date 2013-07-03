@@ -1,8 +1,23 @@
 <h2>New attendee</h2>
+
 <%= form_for(@attendee) do |f| %>
+	<% if @attendee.errors.any? %>
+		<div id="error-explanation">
+			<h2><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h2>
+			<ul>
+				<% @attendee.errors.full_messages.each do |msg| %>
+					<li class="error-message"><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 	<p>
 		<%= f.label :name %><br>
 		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_field :email, type: :email %>
 	</p>
 	<p>
 		<%= f.label :website %><br>

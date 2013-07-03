@@ -12,6 +12,8 @@ class AttendeesController < ApplicationController
 			flash[:notice] = 'Yay! You are definitely attending DevCongress :)'
 			redirect_to agenda_path
 		else
+			flash[:alert] = 'Registration failed :('
+			render 'new'
 			# nothing, yet
 		end
 	end
