@@ -1,0 +1,51 @@
+<%= form_for(@attendee) do |f| %>
+	<% if @attendee.errors.any? %>
+		<div id="error-explanation">
+			<h2><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h2>
+			<ul>
+				<% @attendee.errors.full_messages.each do |msg| %>
+					<li class="error-message"><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_field :email, type: :email %>
+	</p>
+	<p>
+		<%= f.label :website %><br>
+		<%= f.url_field :website %>
+	</p>
+	<p>
+		<%= f.label :github %><br>
+		<%= f.text_field :github %>
+	</p>
+	<p>
+		<%= f.label :linkedin %><br>
+		<%= f.text_field :linkedin %>
+	</p>
+	<p>
+		<%= f.label :twitter %><br>
+		<%= f.text_field :twitter %>
+	</p>
+	<p>
+		<%= f.label :interests %><br>
+		<%= f.text_field :interests %>
+	</p>
+	<p>
+		<%= f.label :specialty %><br>
+		<%= f.text_field :specialty %>
+	</p>
+	<p>
+		<%= f.label :expectation %><br>
+		<%= f.text_area :expectation %>
+	</p>
+	<p>
+		<%= f.submit 'I am attending DevCongress so Sign me up!' %>
+	</p>
+<% end %>

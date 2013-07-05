@@ -1,0 +1,18 @@
+<% provide :title, 'Submit a title' %>
+<%= form_for(@title) do |f| %>
+	<p><%= f.text_field  :submitter_name, 	id: 'submitter-name', 	placeholder: 'Your nickname' %></p>
+	<p><%= f.email_field :submitter_email, 	id: 'submitter-email', 	placeholder: 'Your email address' %></p>
+	<p><%= f.text_field  :title, 						id: 'title', 						placeholder: 'What\'s the topic about?' %></p>
+	<p><%= f.text_area 	 :relevance, 				id: 'relevance', 				placeholder: 'What\'s the relevance of this talk?' %></p>
+
+	<p><%= f.label 'Difficulty Level' %><br>
+		 <%= f.select :difficulty_level, [
+					 ['Very Basic', 1], ['Beginner', 2], ['Intermediate', 3],
+					 ['A little advanced', 4], ['Advanced', 5]
+				 ]
+			%>
+	</p>
+	
+	<p><%= f.submit 'Done, submit this title' %></p>
+
+<% end %>

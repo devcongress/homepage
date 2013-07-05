@@ -6,8 +6,11 @@
 development:
   adapter: postgresql
   database: devcongress_development
-	username: <% ENV['DEVCONGRESS_DB'] %>
-	password: <% ENV['DEVCONGRESS_PW'] %>
+  encoding: unicode
+  username: <%= ENV['DEVCONGRESS_DB'] %>
+  password: <%= ENV['DEVCONGRESS_PW'] %>
+  host: localhost
+  port: 5432
   pool: 5
   timeout: 5000
 
@@ -17,8 +20,11 @@ development:
 test:
   adapter: postgresql
   database: devcongress_test
-	username: <% ENV['DEVCONGRESS_DB'] %>
-	password: 
+  encoding: unicode
+  username: <%= ENV['DEVCONGRESS_DB'] %>
+  password: <%= ENV['DEVCONGRESS_PW'] %>
+  host: localhost
+  port: 5432
   pool: 5
   timeout: 5000
 
