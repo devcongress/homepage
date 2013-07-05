@@ -1,5 +1,3 @@
-<h2>New attendee</h2>
-
 <%= form_for(@attendee) do |f| %>
 	<% if @attendee.errors.any? %>
 		<div id="error-explanation">
@@ -21,7 +19,7 @@
 	</p>
 	<p>
 		<%= f.label :website %><br>
-		<%= f.text_field :website, type: :url %>
+		<%= f.url_field :website %>
 	</p>
 	<p>
 		<%= f.label :github %><br>
