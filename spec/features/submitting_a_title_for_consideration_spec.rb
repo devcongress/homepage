@@ -12,7 +12,7 @@ feature 'Submitting a Title' do
 		fill_in 'submitter-email', 	with: 'li@song.org'
 		fill_in 'title', 		   	with: 'Secrets of a JavaScript Ninja'
 		fill_in 'relevance', 		with: 'Client-side MVC is taking over the market'
-		select  'Intermediate', 	from: 'Difficulty Level'
+		select  'Intermediate', 	from: 'title_difficulty_level'
 
 		click_button 'Done, submit this title'
 	end

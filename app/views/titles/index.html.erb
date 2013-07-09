@@ -1,0 +1,14 @@
+<% provide :title, 'Submitted titles' %>
+<h2>Titles under consideration:</h2>
+<div>
+	<ul>
+		<% @titles.each do |ttl| %>
+			<li><%= link_to ttl.title, ttl %>
+					submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %>
+					@ <%= ttl.created_at %>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+<p>Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
