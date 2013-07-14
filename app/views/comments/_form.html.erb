@@ -1,0 +1,26 @@
+<%= form_for [ @title, @comment ] do |f| %>
+	<% if @comment.errors.any? %>
+		<div class="errors_explanation">
+			<ul>
+			<% @comment.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<p>
+		<%= f.label :commenter_name, 'Your name' %>
+		<%= f.text_field :commenter_name, class: 'comment-input-name', id: 'comment-name' %>
+	</p>
+	<p>
+		<%= f.label :commenter_website, 'Your website' %><br>
+		<%= f.url_field :commenter_website, class: 'comment-input-website', id: 'comment-website' %>
+	</p>
+	<p>
+		<%= f.label :comment_body, 'Comment' %><br>
+		<%= f.text_area :comment_body, class: 'comment-input-comment', id: 'comment-body' %>
+	</p>
+	<p>
+		<%= f.submit 'Comment!' %>
+	</p>
+<% end %>

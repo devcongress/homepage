@@ -2,7 +2,10 @@ Devconf::Application.routes.draw do
   root to: 'pages#index'
 
   resources :attendees
-  resources :titles
+  
+  resources :titles do
+  	resources :comments
+  end
   
   match '/register', 			to: 'attendees#new', 	via: 'get'
   match '/agenda',	 			to: 'pages#agenda',  	via: 'get'

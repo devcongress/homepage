@@ -1,6 +1,6 @@
 <% provide :title, 'Submitted titles' %>
 <% if @titles.empty? %>
-	<%= render 'layouts/titles/no_titles_yet' %>
+	<%= render 'no_titles_yet' %>
 <% else %>
-	<%= render 'layouts/titles/titles_submitted' %>
+	<%= render 'some_titles_submitted' %>
 <% end %>

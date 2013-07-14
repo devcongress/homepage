@@ -1,4 +1,7 @@
 class TitlesController < ApplicationController
+	
+	before_action :set_title, only: [ :show ]
+
 	def index
 		@titles = Title.all.order 'created_at DESC'
 	end
@@ -18,11 +21,19 @@ class TitlesController < ApplicationController
 	end
 
 	def show
-		@title = Title.find_by_id(params[:id])
+		@title = Title.find_by_id params[:id]
 	end
 
 
 	private
+
+		def set_title
+			@title = Title.find_by_id params[:id]
+			if @title.nil?
+				flash[:alert] = 'No, no such title.'
+				redirect_to titles_path
+			end
+		end
 
 		def title_params
 			params.require(:title).permit(
@@ -33,4 +44,5 @@ class TitlesController < ApplicationController
 				:difficulty_level
 			)
 		end
+
 end

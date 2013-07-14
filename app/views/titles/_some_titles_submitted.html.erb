@@ -1,0 +1,15 @@
+<h2>Titles under consideration:</h2>
+<div>
+	<% unless @titles.empty? %>
+		<ul>
+			<% @titles.each do |ttl| %>
+				<li><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
+						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %>
+						@ <%= ttl.created_at %>
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+</div>
+
+<p>Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
