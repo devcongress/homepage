@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 1.2'
 group :production do
 	# Monitor app performance with New Relic RPM
 	gem 'newrelic_rpm'
+	gem 'rails_12factor'
 end
 
 group :development, :test do
