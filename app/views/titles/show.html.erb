@@ -2,3 +2,21 @@
 <p>Why this title is necessary: <%= @title.relevance %></p>
 <p>Difficulty level: <%= @title.difficulty_level %></p>
 <p>This title was submitted at <%= @title.created_at %></p>
+<p><%= link_to 'I want to comment on this title', new_title_comment_path(@title) %><p>
+<% if @title.comments.any? %>
+	<p><%= pluralize @title.comments.count, 'comment' %> on this title already.</p>
+	<div style="margin-left: 10px;" id="comments" class="comments-display">
+		<% @title.comments.each do |comment| %>
+			<div class="single-comment">
+				<p>
+					<% unless comment.commenter_website.blank? %>
+						<%= link_to comment.commenter_name, comment.commenter_website %>
+					<% else %>
+						<%= comment.commenter_name %>
+					<% end %> 
+				</p>
+				<p><%= comment.comment_body %></p>
+			</div>
+		<% end %>
+	</div>
+<% end %>
