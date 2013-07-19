@@ -5,11 +5,54 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+
+  <script type="text/javascript">
+  	$('body').css('background-image', 'url('bg.png')');
+  </script>
+
+  <!-- start Dropifi -->
+  <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('1a37a1c9d42adc37f1c8c46fd07c22af-1365435502695');
+  </script> <!-- end Dropifi -->
 </head>
+
 <body>
-<nav>
-	<%= link_to 'Home', root_path %> | <%= link_to 'Agenda', agenda_path %> | <%= link_to 'Titles', titles_path %>
-</nav>
+	<!-- nav bar begins here -->
+	<div>
+		<!-- nav bar begins here -->
+		<ul class="nav social" role="navigation">
+			<li class="navlink">
+				<a href="/">Home</a>
+			</li>
+			<li class="navlink">
+				<a href="/titles">Titles</a>
+			</li>
+			<li class="navlink">
+				<a href="/about_us">About Us</a>
+			</li>
+			<a>
+			<li class="soc-btn">
+				<%= link_to image_tag("facebook.png"), "http://facebook.com/devcongress" %>
+			</li>
+			<li class="soc-btn">
+				<%= link_to image_tag("twitter.png"), "http://twitter.com/devcongress" %>
+			</li>
+			<li class="soc-btn">
+				<%= link_to image_tag("googleplus.png"), "http://gplus.to/devcongress" %>
+			</li>
+			<li class="soc-btn">
+				<%= link_to image_tag("youtube.png"), "http://youtube.com/devcongress" %>
+			</li>
+		</ul>
+	</div>
+	<!-- nav bar ends here-->
+
+	<!--logo-->
+	<div style="max-width:80%; margin: 0 auto; margin-top: -40px;">
+		<%= link_to image_tag("devcon2013.png"), "http://devcongress.com" %>
+	</div>
+	<!--logo-->
+
 <% flash.each do |key, value| %>
 	<div class="alert <%= key %>" id="<%= value %>">
 		<%= value %>
@@ -18,7 +61,9 @@
 <%= yield %>
 
 </body>
+<!--
 <pre>
 	<%= debug(:params) if Rails.env.development? %>
 </pre>
+-->
 </html>

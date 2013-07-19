@@ -1,2 +1,77 @@
-<%= link_to 'Register', register_path %><br>
-<%= link_to 'Submit a title', submit_title_path %>
+<html>
+<head>
+	<meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dev Congress</title>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">	
+		<section>
+			<div>
+				<div class="tagline">
+					<p>Tech Conference for Ghanaian Developers</p>
+				</div>
+				<div class="date lato">
+					<h1 style="letter-spacing: 5px; font-weight: 300;">24th.august(2013)</h1>
+				</div>
+			</div>
+		</section>
+        
+        <section>
+            <div class="hi-icon-wrap hi-icon-effect-8 lato">
+                <a class="hi-icon hi-icon-bookmark font17 br2" <%= link_to 'Register', register_path %></a>
+                <a class="space"></a>
+                <a class="hi-icon hi-icon-pencil font17" <%= link_to ' Submit Title', submit_title_path %></a>
+             	<a class="space"></a>
+                <a class="hi-icon hi-icon-list font17" <%= link_to 'Agenda', agenda_path %></a>
+            </div>
+        </section>
+        
+		<footer role="contentinfo">   
+		</footer>
+        </div><!--	CONTAINER DIV ENDS -->
+    	
+    	<!-- Sonar effect code begins -->
+    	<script>
+			var hash = window.location.hash,
+				current = 0,
+				demos = Array.prototype.slice.call( document.querySelectorAll( '#codrops-demos > a' ) );
+			
+			if( hash === '' ) hash = '#set-1';
+			setDemo( demos[ parseInt( hash.match(/#set-(\d+)/)[1] ) - 1 ] );
+
+			demos.forEach( function( el, i ) {
+				el.addEventListener( 'click', function() { setDemo( this ); } );
+			} );
+
+			function setDemo( el ) {
+				var idx = demos.indexOf( el );
+				if( current !== idx ) {
+					var currentDemo = demos[ current ];
+					currentDemo.className = currentDemo.className.replace(new RegExp("(^|\\s+)" + 'current-demo' + "(\\s+|$)"), ' ');
+				}
+				current = idx;
+				el.className = 'current-demo'; 
+			}
+		</script>
+		<!-- Sonar effect code ends -->
+
+		<!-- Google Analytics Tracking Code Begin -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-42476561-1', 'devcongress.com');
+		  ga('send', 'pageview');
+
+		</script>
+		<!-- Google Analytics Tracking Code End -->
+</body>
+</html>

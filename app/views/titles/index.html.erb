@@ -1,6 +1,9 @@
 <% provide :title, 'Submitted titles' %>
-<% if @titles.empty? %>
-	<%= render 'no_titles_yet' %>
-<% else %>
-	<%= render 'some_titles_submitted' %>
-<% end %>
+
+<div class="container">
+	<% if @titles.empty? %>
+		<%= render 'no_titles_yet' %>
+	<% else %>
+		<%= render 'some_titles_submitted' %>
+	<% end %>	
+</div>
