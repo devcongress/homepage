@@ -21,7 +21,7 @@ class TitlesController < ApplicationController
 	end
 
 	def show
-		@title = Title.find_by_id params[:id]
+		@comment = @title.comments.build
 	end
 
 

@@ -4,10 +4,6 @@ class CommentsController < ApplicationController
 	def index
 	end
 
-  def new
-  	@comment = @title.comments.build
-  end
-
   def create
   	@comment = @title.comments.build comment_params
   	if @comment.save
@@ -15,7 +11,7 @@ class CommentsController < ApplicationController
   		redirect_to @title
   	else
   		flash[:alert] = 'Oops! Your comment couldn\'t be saved.'
-  		render 'new'
+  		render 'titles/show'
   	end
   end
 
