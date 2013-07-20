@@ -8,4 +8,6 @@ class PagesController < ApplicationController
   def speakers
   end
 
+  def about
+  end
 end
