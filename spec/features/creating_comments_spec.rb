@@ -5,7 +5,6 @@ feature 'Creating Comment' do
 		FactoryGirl.create :title, title: 'Using Chrome DevTools'
 		visit 		 titles_path
 		click_link 'Using Chrome DevTools'
-		click_link 'I want to comment on this title'
 	end
 
 	scenario 'can comment on a title' do
@@ -15,7 +14,6 @@ feature 'Creating Comment' do
 		click_button 'Comment!'
 
 		expect(page).to have_content 'Thank you for commenting!'
-		expect(page).to have_content 'I want to comment on this title'
 	end
 
 	scenario 'cannot comment on a title' do

@@ -3,7 +3,7 @@ class TitlesController < ApplicationController
 	before_action :set_title, only: [ :show ]
 
 	def index
-		@titles = Title.all.order 'created_at DESC'
+		@titles = Title.all.order '(SELECT count(comments) FROM comments WHERE title_id = titles.id) DESC'
 	end
 
 	def new
@@ -21,7 +21,7 @@ class TitlesController < ApplicationController
 	end
 
 	def show
-		@title = Title.find_by_id params[:id]
+		@comment = @title.comments.build
 	end
 
 
