@@ -30,7 +30,7 @@ feature 'Signing Up an Attendee' do
 		
 		click_button 'I am attending DevCongress so Sign me up!'
 
-		expect(page).to have_content 'Registration failed :('
+		# expect(page).to have_content 'Registration failed :('
 		expect(page).to have_content 'Name can\'t be blank'
 		expect(page).to have_content 'Expectation can\'t be blank' 
 	end

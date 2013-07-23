@@ -53,12 +53,21 @@
 	</div>
 	<!--logo-->
 
+<<<<<<< HEAD
 <% flash.each do |key, value| %>
 	<div class="alert <%= key %>" id="<%= value %>">
 		<%= value %>
+=======
+	<div class="container">
+		<% flash.each do |key, value| %>
+			<div class="alert <%= key %>" id="<%= value %>">
+				<%= value %>
+			</div>
+		<% end %>
+		<%= yield %>
+>>>>>>> 707942da0194be23a9f48b24b89a7120c93cb813
 	</div>
-<% end %>
-<%= yield %>
+
 
 </body>
 <!--

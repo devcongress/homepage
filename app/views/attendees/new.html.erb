@@ -1,6 +1,6 @@
-<div class="container">
-	<p class="lato tagline">Register for Dev Congress 2013</p>
-	<form class="formee grid-8-12">
+<p class="lato tagline">Register for Dev Congress 2013</p>
+<div class="container formee grid-8-12">
+	<!-- <form class="formee grid-8-12"> -->
 		<%= form_for(@attendee) do |f| %>
 			<% if @attendee.errors.any? %>
 				<div id="error-explanation">
@@ -13,7 +13,7 @@
 				</div>
 			<% end %>
 
-			<fieldset style="margin-left: 8em;">
+		<!--	<fieldset style="margin-left: 8em;"> -->
 				<div class="grid-10-12">
 					<p>
 						<%= f.label :name %><br>
@@ -74,11 +74,11 @@
 						<%= f.submit 'I am attending DevCongress so Sign me up!' %>
 					</p>
 				</div>
-			</fieldset>
+		<!--	</fieldset> -->
 
 		<% end %>
 
-	</form>
+	<!-- </form> -->
 
 	
 </div>
