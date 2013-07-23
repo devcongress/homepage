@@ -1,51 +1,84 @@
-<%= form_for(@attendee) do |f| %>
-	<% if @attendee.errors.any? %>
-		<div id="error-explanation">
-			<h2><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h2>
-			<ul>
-				<% @attendee.errors.full_messages.each do |msg| %>
-					<li class="error-message"><%= msg %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-	<p>
-		<%= f.label :name %><br>
-		<%= f.text_field :name %>
-	</p>
-	<p>
-		<%= f.label :email %><br>
-		<%= f.text_field :email, type: :email %>
-	</p>
-	<p>
-		<%= f.label :website %><br>
-		<%= f.url_field :website %>
-	</p>
-	<p>
-		<%= f.label :github %><br>
-		<%= f.text_field :github %>
-	</p>
-	<p>
-		<%= f.label :linkedin %><br>
-		<%= f.text_field :linkedin %>
-	</p>
-	<p>
-		<%= f.label :twitter %><br>
-		<%= f.text_field :twitter %>
-	</p>
-	<p>
-		<%= f.label :interests %><br>
-		<%= f.text_field :interests %>
-	</p>
-	<p>
-		<%= f.label :specialty %><br>
-		<%= f.text_field :specialty %>
-	</p>
-	<p>
-		<%= f.label :expectation %><br>
-		<%= f.text_area :expectation %>
-	</p>
-	<p>
-		<%= f.submit 'I am attending DevCongress so Sign me up!' %>
-	</p>
-<% end %>
+<p class="lato tagline">Register for Dev Congress 2013</p>
+<div class="container formee grid-8-12">
+	<!-- <form class="formee grid-8-12"> -->
+		<%= form_for(@attendee) do |f| %>
+			<% if @attendee.errors.any? %>
+				<div id="error-explanation">
+					<h2><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h2>
+					<ul>
+						<% @attendee.errors.full_messages.each do |msg| %>
+							<li class="error-message"><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+		<!--	<fieldset style="margin-left: 8em;"> -->
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :name %><br>
+						<%= f.text_field :name %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :email %><br>
+						<%= f.text_field :email, type: :email %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :website %><br>
+						<%= f.url_field :website %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :github %><br>
+						<%= f.text_field :github %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :linkedin %><br>
+						<%= f.text_field :linkedin %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :twitter %><br>
+						<%= f.text_field :twitter %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :interests %><br>
+						<%= f.text_field :interests %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :specialty %><br>
+						<%= f.text_field :specialty %>
+					</p>
+				</div>
+				<div class="grid-10-12">
+					<p>
+						<%= f.label :expectation %><br>
+						<%= f.text_area :expectation %>
+					</p>
+				</div>
+
+				<div class="grid-10-12">
+					<p>
+						<%= f.submit 'I am attending DevCongress so Sign me up!' %>
+					</p>
+				</div>
+		<!--	</fieldset> -->
+
+		<% end %>
+
+	<!-- </form> -->
+
+	
+</div>
