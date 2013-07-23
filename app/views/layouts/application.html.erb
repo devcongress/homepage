@@ -28,7 +28,7 @@
 				<a href="/titles">Titles</a>
 			</li>
 			<li class="navlink">
-				<a href="/about_us">About Us</a>
+				<a href="/about">About Us</a>
 			</li>
 			<a>
 			<li class="soc-btn">
@@ -49,16 +49,19 @@
 
 	<!--logo-->
 	<div style="max-width:80%; margin: 0 auto; margin-top: -40px;">
-		<%= link_to image_tag("devcon2013.png"), "http://devcongress.com" %>
+		<%= link_to image_tag("devcon2013.png"), root_path %>
 	</div>
 	<!--logo-->
 
-<% flash.each do |key, value| %>
-	<div class="alert <%= key %>" id="<%= value %>">
-		<%= value %>
+	<div class="container">
+		<% flash.each do |key, value| %>
+			<div class="alert <%= key %>" id="<%= value %>">
+				<%= value %>
+			</div>
+		<% end %>
+		<%= yield %>
 	</div>
-<% end %>
-<%= yield %>
+
 
 </body>
 <!--

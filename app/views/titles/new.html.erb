@@ -1,10 +1,20 @@
-<div class="container">
-	<p class="lato tagline">Submit a title for Dev Congress 2013 - Become a speaker!</p>
-	<form class="formee grid-8-12">
+<p class="lato tagline">Submit a title for Dev Congress 2013 - Become a speaker!</p>
+<div class="container formee grid-8-12">
+	<!-- <form class="formee grid-8-12"> -->
 		<% provide :title, 'Submit a title' %>
 		<%= form_for(@title) do |f| %>
+			<% if @title.errors.any? %>
+				<div id="error-explanation">
+					<h2><%= pluralize @title.errors.count, 'error' %> prohibited your title from being submitted.</h2>
+					<ul>
+						<% @title.errors.full_messages.each do |msg| %>
+							<li class="error-message"><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
 
-			<fieldset style="margin-: 0 auto;">
+			<!-- <fieldset style="margin-: 0 auto;"> -->
 				<div class="grid-10-12">
 					<p>
 						<%= f.text_field  :submitter_name, 	id: 'submitter-name', 	placeholder: 'Your nickname' %>
@@ -44,11 +54,11 @@
 						<%= f.submit 'Done, submit this title' %>
 					</p>					
 				</div>
-			</fieldset>
+			<!-- </fieldset> -->
 			
 		<% end %>
 
-	</form>
+	<!-- </form> -->
 
 	
 </div>
