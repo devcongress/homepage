@@ -2,11 +2,14 @@ class Title < ActiveRecord::Base
 	
 	has_many :comments, dependent: :delete_all
 
-	scope :order_by_number_of_comments_descending,
-		select('titles.*, count(comments.id)').
+	
+	def self.order_by_number_of_comments_descending
+		select('titles.*').
 		joins(:comments).
 		group('titles.id').
 		order('count(comments.id) DESC')
+	end
+
 
 	validates :title, :submitter_name, :submitter_email, presence: true
 	validates :relevance, :difficulty_level, presence: true
