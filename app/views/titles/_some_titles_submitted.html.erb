@@ -1,9 +1,9 @@
-<h2>Titles under consideration:</h2>
-<div>
+<h2 class="lato">Titles under consideration:</h2>
+<div class="open-sans">
 	<% unless @titles.empty? %>
 		<ul>
 			<% @titles.each do |ttl| %>
-				<li><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
+				<li class="f17"><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
 						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %>
 						@ <%= ttl.created_at %>
 				</li>
@@ -12,4 +12,4 @@
 	<% end %>
 </div>
 <br>
-<p>Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
+<p class="open-sans">Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
