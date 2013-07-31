@@ -1,10 +1,15 @@
+<<<<<<< HEAD
+<h2 class="lato">Titles under consideration:</h2>
+<div class="open-sans">
+=======
 <h2>Here, all titles submitted for consideration</h2>
 
 <div>
+>>>>>>> 60c015b550efe779aa888790447773c391007dc3
 	<% unless @titles.empty? %>
 		<ul>
 			<% @titles.each do |ttl| %>
-				<li><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
+				<li class="f17"><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
 						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %>
 						<i>about <%= time_ago_in_words ttl.created_at %></i>
 				</li>
@@ -13,4 +18,4 @@
 	<% end %>
 </div>
 <br>
-<p>Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
+<p class="open-sans">Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
