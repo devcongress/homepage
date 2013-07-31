@@ -199,7 +199,7 @@ input[type="color"],
 .alert-info, .alert-info .alert-heading {
   color: #3a87ad;
 }
-
+/*
 .navbar-inner {
   background-image: -moz-linear-gradient(top, #, #);
   background-image: -ms-linear-gradient(top, #, #);
@@ -208,7 +208,7 @@ input[type="color"],
   background-image: -o-linear-gradient(top, #, #);
   background-image: linear-gradient(top, #, #);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#', endColorstr='#', GradientType=0);
-}
+}*/
 
 .navbar .brand {
   padding: ;
