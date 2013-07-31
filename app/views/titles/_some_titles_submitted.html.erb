@@ -5,7 +5,7 @@
 			<% @titles.each do |ttl| %>
 				<li class="f17"><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
 						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %>
-						<i>about <%= time_ago_in_words ttl.created_at %></i>
+						<i>about <%= time_ago_in_words ttl.created_at %> ago.</i>
 				</li>
 			<% end %>
 		</ul>

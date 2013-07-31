@@ -1,5 +1,5 @@
 <% if @title.comments.any? %>
-	<div style="margin-left: 10px;" id="comments" class="comments-display">
+	<div id="comments" class="comments-display form-last">
 		<% @title.comments.each do |comment| %>
 			<div class="single-comment">
 				<p>
@@ -10,6 +10,7 @@
 					<% end %> 
 				</p>
 				<p><%= comment.comment_body %></p>
+				<br>
 			</div>
 		<% end %>
 	</div>

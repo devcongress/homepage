@@ -1,6 +1,6 @@
 <% provide :title, "Comments on #{@title.title}" %>
 <div class="container">
-	<h1 class="lato"><%= @title.title %></h1>
+	<h1 class="lato"><%= @title.title %><small> submitted by <%= mail_to @title.submitter_email, @title.submitter_name %></small></h1>
 	<p><i><%= pluralize @title.comments.count, 'comment' %></i>.</p>
 	<% @title.comments.each do |comment| %>
 		<div class="single-comment">
