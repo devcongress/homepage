@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+<div class="container">
+	<h2 class="lato">A talk on <i><%= @title.title %></i> submitted/suggested by <%= mail_to @title.submitter_email, @title.submitter_name %></h2>
+
+	<dl class="dl-horizontal">
+		<dt>Why it is necessary</dt>
+		<dd><%= @title.relevance %></dd>
+		<dt>Difficulty level</dt>
+		<dd><%= @title.difficulty_level %></dd>
+		<dt>Submitted at</dt>
+		<dd><%= title.created_at %></dd>
+	</dl>
+
+	<h4><i><%= pluralize @title.comments.count, 'comment' %>. <small>Scroll to view comments</small></i></h4>
+	<div class="span8">
+		<%= render 'comments/form' %>
+	</div>
+
+	<div class="span8 form-last">
+		<% if @title.comments.any? %>
+			<div id="comments" class="comments-display">
+				<% @title.comments.each do |comment| %>
+					<div class="single-comment">
+						<p>
+							<% unless comment.commenter_website.blank? %>
+								<%= link_to comment.commenter_name, comment.commenter_website %>
+							<% else %>
+								<%= comment.commenter_name %>
+							<% end %> 
+						</p>
+						<p><%= comment.comment_body %></p>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+		
+	
+</div>
+=======
 <h2>A talk on <i><%= @title.title %></i> submitted/suggested by <%= mail_to @title.submitter_email, @title.submitter_name %></h2>
 <p>Why this title is necessary: <strong><%= simple_format @title.relevance %></strong></p>
 <p>Difficulty level: <strong><%= @title.difficulty_level %></strong></p>
@@ -6,3 +46,4 @@
 <p><i><%= pluralize @title.comments.count, 'comment' %>.</i></p>
 <%= render 'comments/form' %>
 <%= render 'comments/all_comments_for_this_title' %>
+>>>>>>> 60c015b550efe779aa888790447773c391007dc3

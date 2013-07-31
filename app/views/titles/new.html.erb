@@ -1,64 +1,125 @@
-<p class="lato tagline">Submit a title for Dev Congress 2013 - Become a speaker!</p>
-<div class="container formee grid-8-12">
-	<!-- <form class="formee grid-8-12"> -->
-		<% provide :title, 'Submit a title' %>
-		<%= form_for(@title) do |f| %>
-			<% if @title.errors.any? %>
-				<div id="error-explanation">
-					<h2><%= pluralize @title.errors.count, 'error' %> prohibited your title from being submitted.</h2>
+<% provide :title, 'Submit a title' %>
+<div class="container">
+	<h2 class="lato">Submit a title for Dev Congress 2013 - Become a speaker!</h2>
+	
+	<%= form_for(@title) do |f| %>
+		<% if @title.errors.any? %>
+			<div id="error-explanation">
+				<div class="alert alert-danger alert-block open-sans">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<h4 class="open-sans"><%= pluralize @title.errors.count, 'error' %> prohibited your title from being submitted.</h4>
 					<ul>
 						<% @title.errors.full_messages.each do |msg| %>
 							<li class="error-message"><%= msg %></li>
 						<% end %>
 					</ul>
 				</div>
-			<% end %>
-
-			<!-- <fieldset style="margin-: 0 auto;"> -->
-				<div class="grid-10-12">
-					<p>
-						<%= f.text_field  :submitter_name, 	id: 'submitter-name', 	placeholder: 'Your nickname' %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.email_field :submitter_email, 	id: 'submitter-email', 	placeholder: 'Your email address' %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.text_field  :title, 						id: 'title', 						placeholder: 'What\'s the topic about?' %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.text_area 	 :relevance, 				id: 'relevance', 				placeholder: 'What\'s the relevance of this talk?' %>
-					</p>
-				</div>
-				
-				<div class="grid-10-12">
-					<p>
-					<%= f.label 'Difficulty Level' %><br>
-					<%= f.select :difficulty_level, [
-					 ['Very Basic', 1],
-					 ['Beginner', 2],
-					 ['Intermediate', 3],
-					 ['A little advanced', 4],
-					 ['Advanced', 5]
-					]%>
-					</p>
-				</div>
-
-				<div class="grid-10-12">
-					<p>
-						<%= f.submit 'Done, submit this title' %>
-					</p>					
-				</div>
-			<!-- </fieldset> -->
-			
+			</div>
 		<% end %>
 
-	<!-- </form> -->
 
-	
+		<div class="col-lg-4">
+			<div class="control-group">
+				<%= f.label 'Nickname' %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-user"></i>
+						</span>
+						<%= f.text_field :submitter_name,
+							id: 'submitter-name',
+							:class => 'form-control input-small',
+							placeholder: 'Your nickname'
+						%>				
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label 'Email' %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-envelope"></i>
+						</span>
+						<%= f.email_field :submitter_email,
+							id: 'submitter-email',
+							:class => 'form-control input-small',
+							placeholder: 'Your email address'
+						%>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label 'Title of your talk' %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-book"></i>
+						</span>
+						<%= f.text_field  :title,
+							:class => 'form-control input-small',
+							id: 'title',
+							placeholder: 'What\'s the topic about?'
+						%>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label 'Its relevance' %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-signal"></i>
+						</span>
+						<%= f.text_area :relevance,
+							:class => 'form-control input-small',
+							id: 'relevance',
+							placeholder: 'What\'s the relevance of this talk?'
+						%>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label 'Difficulty level' %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-dashboard"></i>
+						</span>
+						<%= f.select(
+								:difficulty_level, [
+									['Very Basic', 1],
+									['Beginner', 2],
+									['Intermediate', 3],
+									['A little advanced', 4],
+									['Advanced', 5],
+								],
+								{},
+								{:class => 'form-control input-small'}
+							) 
+						%>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<br>
+				<div class="input-group form-last">
+						<%= f.submit 'Done, submit this title', type: :submit, :class => 'btn btn-success' %>
+				</div>
+			</div>
+
+		</div>
+
+	<% end %>
+
 </div>
