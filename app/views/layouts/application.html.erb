@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.ico' %>
+	<meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title><%= title yield(:title) %></title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+	<%= favicon_link_tag 'favicon.ico' %>
 
-  <script type="text/javascript">
-  	$('body').css('background-image', 'url('bg.png')');
-  </script>
-
-  <!-- start Dropifi -->
-  <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('1a37a1c9d42adc37f1c8c46fd07c22af-1365435502695');
-  </script> <!-- end Dropifi -->
+	<!-- Bootstrap 3.0.0rc1, FontAwesome 3.2.1, Modernizr 2.6.2, jQuery 2.0.3 -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 </head>
 
 <body>
-	<!-- nav bar begins here -->
-	<div>
-		<!-- nav bar begins here -->
-		<ul class="nav social" role="navigation">
-			<li class="navlink">
-				<%= link_to 'Home', root_path %>
-			</li>
-			<li class="navlink">
-				<%= link_to 'Titles', titles_path %>
-			</li>
-			<li class="navlink">
-				<%= link_to 'About', about_path %>
-			</li>
-			<a>
-			<li class="soc-btn">
-				<%= link_to image_tag("facebook.png"), "http://facebook.com/devcongress" %>
-			</li>
-			<li class="soc-btn">
-				<%= link_to image_tag("twitter.png"), "http://twitter.com/devcongress" %>
-			</li>
-			<li class="soc-btn">
-				<%= link_to image_tag("googleplus.png"), "http://gplus.to/devcongress" %>
-			</li>
-			<li class="soc-btn">
-				<%= link_to image_tag("youtube.png"), "http://youtube.com/devcongress" %>
-			</li>
-		</ul>
-	</div>
-	<!-- nav bar ends here-->
+	<div class="main">		
+		
+		<div class="navbar">
+			<div class=" fauna f17">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
 
-	<!--logo-->
-	<div style="max-width:80%; margin: 0 auto; margin-top: -40px;">
-		<%= link_to image_tag("devcon2013.png"), root_path %>
-	</div>
-	<!--logo-->
+				<a class="navbar-brand" href="/">Dev Congress</a>
 
-	<div class="container">
-		<% flash.each do |key, value| %>
-			<div class="alert <%= key %>" id="<%= value %>">
-				<%= value %>
-			</div>
-		<% end %>
-		<%= yield %>
+				<div class="nav-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav pull-right">
+						<li class="navlinks">
+							<%= link_to 'Home', root_path %>		
+						</li>
+						<li class="navlinks">
+							<%= link_to 'Titles', titles_path %>
+						</li>
+						<li class="navlinks">
+		                  	<%= link_to 'About', about_path %>
+	                  	</li>
+	                  	<li>
+		                  	<%= link_to image_tag("facebook.png"), "http://facebook.com/devcongress" %>
+	                  	</li>
+						<li>
+							<%= link_to image_tag("twitter.png"), "http://twitter.com/devcongress" %>
+						</li>
+						<li>
+							<%= link_to image_tag("googleplus.png"), "http://gplus.to/devcongress" %>
+						</li>
+					</ul>
+				</div><!-- /.nav-collapse -->
+			</div><!-- /.container -->
+		</div><!-- /.navbar -->
+
+		<div class="logo">
+			<%= link_to image_tag("devcon2013.png"), root_path %>
+		</div>
+		
+		<div class="tagline">
+			<p>Tech Conference for Developers in Ghana</p>
+		</div>
+
+		<div>
+			<% flash.each do |key, value| %>
+				<div class="alert <%= key %>" id="<%= value %>">
+					<%= value %>
+				</div>
+			<% end %>
+			<%= yield %>
+		</div>
+
 	</div>
 
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+	<!-- start Dropifi -->
+	<script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script>
+	<script type='text/javascript'>document.renderDropifiWidget('1a37a1c9d42adc37f1c8c46fd07c22af-1365435502695');
+	</script>
+	<!-- end Dropifi -->
+
+
+	<!-- Google Analytics Tracking Code Begin -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-42476561-1', 'devcongress.com');
+	  ga('send', 'pageview');
+
+	</script>
+	<!-- Google Analytics Tracking Code End -->
 
 </body>
 <!--
