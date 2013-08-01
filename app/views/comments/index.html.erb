@@ -1,15 +1,18 @@
 <% provide :title, "Comments on #{@title.title}" %>
-<h1><%= @title.title %></h1>
-<p><i><%= pluralize @title.comments.count, 'comment' %></i>.</p>
-<% @title.comments.each do |comment| %>
-	<div class="single-comment">
-		<p>
-			<% unless comment.commenter_website.blank? %>
-				<%= link_to comment.commenter_name, comment.commenter_website %>
-			<% else %>
-				<%= comment.commenter_name %>
-			<% end %> 
-		</p>
-		<p><%= comment.comment_body %></p>
-	</div>
-<% end %>
+<div class="container">
+	<h1 class="lato"><%= @title.title %><small> submitted by <%= mail_to @title.submitter_email, @title.submitter_name %></small></h1>
+	<p><i><%= pluralize @title.comments.count, 'comment' %></i>.</p>
+	<% @title.comments.each do |comment| %>
+		<div class="single-comment">
+			<p>
+				<% unless comment.commenter_website.blank? %>
+					<%= link_to comment.commenter_name, comment.commenter_website %>
+				<% else %>
+					<%= comment.commenter_name %>
+				<% end %> 
+			</p>
+			<p><%= comment.comment_body %></p>
+		</div>
+	<% end %>	
+</div>
+

@@ -1,84 +1,148 @@
-<p class="lato tagline">Register for Dev Congress 2013</p>
-<div class="container formee grid-8-12">
-	<!-- <form class="formee grid-8-12"> -->
-		<%= form_for(@attendee) do |f| %>
-			<% if @attendee.errors.any? %>
-				<div id="error-explanation">
-					<h2><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h2>
+<div class="container">
+	<h2 class="lato">Register for Dev Congress 2013</h2>
+
+	<%= form_for(@attendee) do |f| %>
+		<% if @attendee.errors.any? %>
+			<div id="error-explanation">
+				<div class="alert alert-danger alert-block open-sans">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<h4 class="open-sans"><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h4>
 					<ul>
-						<% @attendee.errors.full_messages.each do |msg| %>
-							<li class="error-message"><%= msg %></li>
-						<% end %>
-					</ul>
+					<% @attendee.errors.full_messages.each do |msg| %>
+						<li class="error-message"><%= msg %></li>
+					<% end %>
+				</ul>
 				</div>
-			<% end %>
-
-		<!--	<fieldset style="margin-left: 8em;"> -->
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :name %><br>
-						<%= f.text_field :name %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :email %><br>
-						<%= f.text_field :email, type: :email %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :website %><br>
-						<%= f.url_field :website %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :github %><br>
-						<%= f.text_field :github %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :linkedin %><br>
-						<%= f.text_field :linkedin %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :twitter %><br>
-						<%= f.text_field :twitter %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :interests %><br>
-						<%= f.text_field :interests %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :specialty %><br>
-						<%= f.text_field :specialty %>
-					</p>
-				</div>
-				<div class="grid-10-12">
-					<p>
-						<%= f.label :expectation %><br>
-						<%= f.text_area :expectation %>
-					</p>
-				</div>
-
-				<div class="grid-10-12">
-					<p>
-						<%= f.submit 'I am attending DevCongress so Sign me up!' %>
-					</p>
-				</div>
-		<!--	</fieldset> -->
-
+			</div>
 		<% end %>
 
-	<!-- </form> -->
+		<div class="col-lg-4">
+			<div class="control-group">
+				<%= f.label :name %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-user"></i>
+						</span>
+						<%= f.text_field :name, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
 
+			<div class="control-group">
+				<%= f.label :email %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-envelope"></i>
+						</span>
+						<%= f.text_field :email, type: :email, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>	
+		
+			<div class="control-group">
+				<%= f.label :website %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-globe"></i>
+						</span>
+						<%= f.url_field :website, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :github %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-github"></i>
+						</span>
+						<%= f.text_field :github, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :linkedin %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-linkedin"></i>
+						</span>
+						<%= f.text_field :linkedin, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :twitter %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-twitter"></i>
+						</span>
+						<%= f.text_field :twitter, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :interests %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-thumbs-up"></i>
+						</span>
+						<%= f.text_field :interests, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :specialty %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-star"></i>
+						</span>
+						<%= f.text_field :specialty, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :expectation %><br>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-magic"></i>
+						</span>
+						<%= f.text_field :expectation, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<br>
+				<div class="input-group form-last">
+						<%= f.submit 'I am attending DevCongress so Sign me up!', type: :submit, :class => 'btn btn-success' %>
+				</div>
+			</div>
+
+		</div>
+
+	<% end %>
 	
 </div>
