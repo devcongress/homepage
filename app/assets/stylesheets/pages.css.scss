@@ -3,11 +3,105 @@
 // You can use Sass (SCSS) here: http://sass-lang.com */
 
 
+@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html{
+    overflow-y: scroll;
+    max-width: 100%;
+}
+
+body {
+    background-image: url('https://dl.dropboxusercontent.com/u/64058349/bg.png');
+    background-repeat: repeat-x;
+    margin: 0; 
+    padding: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif !important;
+    font: 100%/1.4 'Open Sans', sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li > a > img {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: -15px;
+    margin-top: 0px;
+}
+
+a:hover, a:focus {
+    color: #e51837 !important;
+    text-decoration: none !important;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.social{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.open-sans {
+    font-family: 'Open Sans';
+}
+
+.fauna {
+    font-family: 'Fauna One', serif;
+}
+
+.lato{
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+.logo {
+    margin: 0 auto;
+    position: relative;
+    max-width: 80%;
+    margin-top: -10px;
+}
+
+.content-links{
+    display: block;
+}
+
+.tagline {
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+    font-family: 'Fauna One', serif;
+    margin-top: 10px;
+}
+
+.space{
+    margin-left: 5em;
+}
+
+.f17{
+    font-size: 17px !important;
+}
+
+.navlinks {
+    margin-top: 10px;
+}
+
+.form-last {
+    margin-bottom: 40px;
+}
+
+
 /* MAIN STYLE APPLIED HERE*/
 @font-face {
   font-family: 'FontAwesome';
   src: url(http://cdn.kde.org/fonts/fontawesome-webfont.eot);
-  src: 	url(http://cdn.kde.org/fonts/fontawesome-webfont.eot?#iefix) formazt('embedded-opentype'),
+  src: 	url(http://cdn.kde.org/fonts/fontawesome-webfont.eot?#iefix) format('embedded-opentype'),
   		url(http://cdn.kde.org/fonts/fontawesome-webfont.woff) format('woff'),
   		url(http://cdn.kde.org/fonts/fontawesome-webfont.ttf) format('truetype'),
   		url(http://cdn.kde.org/fonts/fontawesome-webfont.svg#FontAwesome) format('svg');
