@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+</head>
+<body>
+  <h1>Welcome on board, <%= @attendee.name.split.first %></h1>
+  <p>
+    Okay, so here's the good news! You ready?<br><br>
+    You have successfully registered to attend DevCongress! We have planned a lot of fun activities (learning as well) to make it the <strong>most exciting developers event</strong> in Ghana ever!
+  </p>
+  <p>The event is on <strong>24th August, 2013 at the Meltwater Entrepreneurial School of Technology</strong> (<%= link_to 'map', 'http://goo.gl/maps/ElhoK' %>)
+  <p>
+    Find out what we'll be doing <%= link_to 'here', agenda_url %>. 
+  </p>
+  <p>See you then.</p>
+  <p>Claude & <%= link_to 'DevCongress', about_url %></p>
+</body>
+</html>

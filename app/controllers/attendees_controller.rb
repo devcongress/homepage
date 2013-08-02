@@ -9,10 +9,11 @@ class AttendeesController < ApplicationController
 	def create
 		@attendee = Attendee.new attendee_params
 		if @attendee.save
+			AttendeeNotifier.registration_successful(@attendee).deliver
 			flash[:notice] = 'Yay! You are definitely attending DevCongress :)'
 			redirect_to agenda_path
 		else
-			# flash[:alert] = ''
+			flash[:alert] = 'Ouch, your registration failed. Let\'s give it another shot'
 			render 'new'
 			# nothing, yet
 		end

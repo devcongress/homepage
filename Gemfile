@@ -16,6 +16,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+gem 'email_spec'
+
 group :production do
 	# Monitor app performance with New Relic RPM
 	gem 'newrelic_rpm'
