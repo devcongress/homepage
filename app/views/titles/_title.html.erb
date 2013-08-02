@@ -2,15 +2,15 @@
 	<h2 class="lato">A talk on <i><%= @title.title %></i> submitted/suggested by <%= mail_to @title.submitter_email, @title.submitter_name %></h2>
 
 	<dl class="dl-horizontal">
-		<dt>Why it is necessary</dt>
-		<dd><%= simple_format @title.relevance %></dd>
-		<dt>Difficulty level</dt>
-		<dd><%= @title.difficulty_level %></dd>
 		<dt>Submitted</dt>
 		<dd><%= time_ago_in_words @title.created_at %> ago</dd>
+		<dt>Difficulty level</dt>
+		<dd><%= @title.difficulty_level %></dd>
+		<dt>Why it is necessary</dt>
+		<dd><%= simple_format @title.relevance %></dd>
 	</dl>
 
-	<h4><i><%= pluralize @title.comments.count, 'comment' %>. <small>Scroll to view comments</small></i></h4>
+	<h4><i><%= link_to (pluralize @title.comments.count, 'comment'), @comments_path %>. <small>Scroll to view comments</small></i></h4>
 	<div class="span8">
 		<%= render 'comments/form' %>
 	</div>
