@@ -7,4 +7,5 @@ class AttendeeNotifier < ActionMailer::Base
   	email_with_name = "#{@attendee.name} <#{@attendee.email}>"
   	mail to: email_with_name, subject: "[DevCongress 24.08.13] #{@attendee.name}, we're looking forward to meeting you :)"
   end
+
 end
