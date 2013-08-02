@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 feature 'Signing Up an Attendee' do
+	include EmailSpec::Helpers
+	include EmailSpec::Matchers
+
 	before do
 		visit '/'
 		click_link 'Register'
@@ -23,7 +26,12 @@ feature 'Signing Up an Attendee' do
 		expect(page.current_url).to eql(agenda_url)
 
 		title = 'Playground'
-		expect(page).to have_title(title)
+		expect(page).to have_title title
+
+		email = find_email! 'guy@developer.me'
+		subject = "[DevCongress 24.08.13] Guy Developer, we're looking forward to meeting you :)"
+		email.subject.should include subject
+
 	end
 
 	scenario 'cannot signup an attendee without name and expectation' do

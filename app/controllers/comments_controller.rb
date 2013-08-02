@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   		flash[:notice] = 'Thank you for commenting!'
   		redirect_to @title
   	else
-  		#flash[:alert] = 'Oops! Your comment couldn\'t be saved.'
+  		flash[:alert] = 'Oops! Your comment couldn\'t be saved.'
   		render 'titles/show'
   	end
   end

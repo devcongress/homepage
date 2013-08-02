@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+</head>
+<body>
+  <h1>Welcome on board, <%= @attendee.name %></h1>
+  <p>
+    You have successfully registered to attend Developers Congress 2013, Accra. We appreciate your support for DevCongress. We have planned a lot of fun activities (learning as well.)
+  </p>
+  <p>
+    Find out what we'll be doing <%= link_to 'here', agenda_url %>. 
+  </p>
+  <p>See you then.</p>
+  <p>Claude & <%= link_to 'DevCongress', about_url %></p>
+</body>
+</html>
