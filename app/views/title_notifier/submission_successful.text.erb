@@ -1,7 +1,9 @@
-Confirmation of receipt of <%= @title.title %>
-==============================================
-  
-We received your request to speak on <%= @title.title %> at <%= link_to 'DevCongress 2013 edition', root_url %> the most exciting developers event in Ghana ever!
+<% titlized = @title.title.split.map { |w| w.capitalize }.join ' ' %>
+
+Confirmation of receipt of <%= titlized %>
+<%= "=" * "Confirmation of receipt of #{titlized}".length %>
+
+We received your request to speak on <%= titlized %> at <%= link_to 'DevCongress 2013 edition', root_url %> the most exciting developers event in Ghana ever!
 
 Your title has been delivered to the Title Selection Committee, a group of curated persons, for careful consideration. We'd get back to you with the decision they'd make concerning your submission.
 
