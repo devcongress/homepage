@@ -5,7 +5,7 @@
 		<dt>Submitted</dt>
 		<dd><%= time_ago_in_words @title.created_at %> ago</dd>
 		<dt>Difficulty level</dt>
-		<dd><%= @title.difficulty_level %></dd>
+		<dd><%= @title.difficulty_level %> / 5</dd>
 		<dt>Why it is necessary</dt>
 		<dd><%= simple_format @title.relevance %></dd>
 	</dl>

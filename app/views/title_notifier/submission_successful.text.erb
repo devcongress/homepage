@@ -1,16 +1,18 @@
-Confirmation of receipt of <%= @title.title %>
-==============================================
-  
-We received your request to speak on <%= @title.title %> at <%= link_to 'DevCongress 2013 edition', root_url %> the most exciting developers event in Ghana ever!
+<% titlized = @title.title.split.map { |w| w.capitalize }.join ' ' %>
+
+Confirmation of receipt of <%= titlized %>
+<%= "=" * "Confirmation of receipt of #{titlized}".length %>
+
+We received your request to speak on <%= titlized %> at DevCongress 2013 edition, the most exciting developers event in Ghana ever!
 
 Your title has been delivered to the Title Selection Committee, a group of curated persons, for careful consideration. We'd get back to you with the decision they'd make concerning your submission.
 
 We're very excited that you are ready to dedicate time and effort to speak at the maiden edition of DevCongress. Your effort is very much appreciated :)
 
-The event is on 24th August, 2013 at the Meltwater Entrepreneurial School of Technology (<%= link_to 'map', 'http://goo.gl/maps/ElhoK' %>)
+The event is on 24th August, 2013 at the Meltwater Entrepreneurial School of Technology.
 
-Find out what we'll be doing <%= link_to 'here', agenda_url %>. 
+
 
 See you then.
 
-Claude & <%= link_to 'DevCongress', about_url %>
+Claude & DevCongress
