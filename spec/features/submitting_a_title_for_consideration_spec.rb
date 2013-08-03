@@ -5,7 +5,6 @@ feature 'Submitting a Title' do
 	include EmailSpec::Matchers
 
 	before do
-		ActionMailer::Base.deliveries.each { |mail| puts mail }
 		ActionMailer::Base.deliveries.clear # clear 'em
 
 		visit '/'
