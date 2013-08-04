@@ -17,6 +17,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'email_spec'
+gem 'rails-observers'
 
 group :production do
 	# Monitor app performance with New Relic RPM
