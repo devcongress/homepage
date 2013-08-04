@@ -1,0 +1,9 @@
+<%= @comment.commenter_name %> commented on your title, <%= @comment.title.title %>
+
+S/he said:
+==========
+<%= @comment.comment_body %>
+
+Comment made at: <%= @comment.created_at %>
+
+Here's the title you submitted with all its comments: <%= title_url(title) %>
