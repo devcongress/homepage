@@ -19,7 +19,7 @@ feature 'Email notification for comments' do
 
 		click_button 'Comment!'
 		email = find_email! chrome_devtools.submitter_email
-		subject = "[DevCongress 24.08.13] New comment on #{chrome_devtools.title}"
+		subject = "[DevCongress 24.08.13] New comment on your title, #{chrome_devtools.title}"
 		email.subject.should include subject
 	end
 
