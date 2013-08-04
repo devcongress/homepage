@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 feature 'Signing Up an Attendee' do
-	include EmailSpec::Helpers
-	include EmailSpec::Matchers
 
 	before do
 		visit '/'

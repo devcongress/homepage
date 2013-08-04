@@ -1,12 +1,13 @@
+<% titlized = @title.title.split.map { |w| w[0].ord < 97 ? w : w.capitalize}.join ' ' %>
 <!DOCTYPE html>
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 </head>
 <body>
-  <h1>Confirmation of receipt of <%= @title.title %></h1>
+  <h2>Confirmation of receipt of title <span style="font-style: italic; font-size: 1.1em;"><%= titlized %></span></h2>
   <p>
-    We received your request to speak on <%= @title.title %> at <%= link_to 'DevCongress 2013 edition', root_url %> the <strong>most exciting developers event</strong> in Ghana ever!
+    We received your request to speak on <strong><%= link_to titlized, title_url(@title) %></strong> at <%= link_to 'DevCongress 2013 edition', root_url %> the <strong>most exciting developers event</strong> in Ghana ever!
   </p>
   <p>
     Your title has been delivered to the Title Selection Committee, a group of curated persons, for careful consideration. We'd get back to you with the decision they'd make concerning your submission.

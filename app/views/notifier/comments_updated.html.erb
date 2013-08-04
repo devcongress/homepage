@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	</head>
+	<body>
+		<%= @comment.commenter_name %> commented on your title, <h3><%= @comment.title.title %></h3>
+		<p>S/he said:<br>
+			 <strong><span style="font-size: 1.1em; font-family: helvetica, arial, sans-serif;"><%= @comment.comment_body %></span></strong>
+		</p>
+		<p>Comment made at: <%= @comment.created_at %></p>
+		<p>Here's the title you submitted and all its comments: <%= title_url(@comment.title) %></p>
+	</body>
+</html>

@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
   def create
   	@comment = @title.comments.build comment_params
   	if @comment.save
-  		flash[:notice] = 'Thank you for commenting!'
+  		flash[:notice] = 'Comment added.'
   		redirect_to @title
   	else
   		flash[:alert] = 'Oops! Your comment couldn\'t be saved.'

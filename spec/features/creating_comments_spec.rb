@@ -13,7 +13,7 @@ feature 'Creating Comment' do
 		fill_in 		 'comment-body', 	 	with: 'Interesting title! You got me :)'
 		click_button 'Comment!'
 
-		expect(page).to have_content 'Thank you for commenting!'
+		expect(page).to have_content 'Interesting title! You got me :)'
 	end
 
 	scenario 'cannot comment on a title' do
