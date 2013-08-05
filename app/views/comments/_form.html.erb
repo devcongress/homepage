@@ -3,6 +3,7 @@
 		<div class="errors_explanation">
 			<div class="alert alert-danger alert-block open-sans">
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4 class="open-sans">Ok, so this is the trick.</h4>
 				<ul>
 					<% @comment.errors.full_messages.each do |msg| %>
 						<li class="error-message"><%= msg %></li>
@@ -10,13 +11,11 @@
 				</ul>
 			</div>
 		</div>
-
-
 	<% end %>
 
 	<div class="col-lg-6">
 		<div class="control-group">
-			<%= f.label :commenter_name, 'Your name' %>
+			<%= f.label :commenter_name, 'Your name' %><small class="gray"> (required)</small>
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">
@@ -37,13 +36,13 @@
 					</span>
 					<%= f.url_field :commenter_website, class: 'comment-input-website', :class => 'form-control input-small', id: 'comment-website' %>
 				</div>
-				<!-- <span class="help-block">Plese prefix 'http://' to your web address</span> -->
+				<span class="help-block">Prefix URL with 'http://'</span>
 			</div>
 			<br>
 		</div>
 
 		<div class="control-group">
-			<%= f.label :comment_body, 'Comment' %>
+			<%= f.label :comment_body, 'Comment' %><small class="gray"> (required)</small>
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">

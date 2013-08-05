@@ -7,7 +7,7 @@
 			<div id="error-explanation">
 				<div class="alert alert-danger alert-block open-sans">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<h4 class="open-sans"><%= pluralize @title.errors.count, 'error' %> prohibited your title from being submitted.</h4>
+					<h4 class="open-sans">Oh, no! we found <%= pluralize @title.errors.count, 'error' %>. Let's try again. </h4>
 					<ul>
 						<% @title.errors.full_messages.each do |msg| %>
 							<li class="error-message"><%= msg %></li>
@@ -20,7 +20,7 @@
 
 		<div class="col-lg-4">
 			<div class="control-group">
-				<%= f.label 'Nickname' %><br>
+				<%= f.label 'Nickname' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -37,7 +37,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Email' %><br>
+				<%= f.label 'Email' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -54,7 +54,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Title of your talk' %><br>
+				<%= f.label 'Title of your talk' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -71,7 +71,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Its relevance' %><br>
+				<%= f.label 'Its relevance' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -88,7 +88,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Difficulty level' %><br>
+				<%= f.label 'Difficulty level' %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
