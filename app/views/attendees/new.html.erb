@@ -6,7 +6,7 @@
 			<div id="error-explanation">
 				<div class="alert alert-danger alert-block open-sans">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<h4 class="open-sans"><%= pluralize @attendee.errors.count, 'error' %> prohibited your registration from being accepted.</h4>
+					<h4 class="open-sans">Ouch, there were <%= pluralize @attendee.errors.count, 'error' %>. Let's give this another shot!</h4>
 					<ul>
 					<% @attendee.errors.full_messages.each do |msg| %>
 						<li class="error-message"><%= msg %></li>
@@ -18,7 +18,7 @@
 
 		<div class="col-lg-4">
 			<div class="control-group">
-				<%= f.label :name %><br>
+				<%= f.label :name %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -31,7 +31,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label :email %><br>
+				<%= f.label :email %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -42,22 +42,37 @@
 				</div>
 				<br>
 			</div>	
+
+			
+			<div class="control-group">
+				<%= f.label :expectation %><small class="gray"> (required)</small>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-magic"></i>
+						</span>
+						<%= f.text_field :expectation, :class => 'form-control input-small' %>					
+					</div>
+				</div>
+				<br>
+			</div>
 		
 			<div class="control-group">
-				<%= f.label :website %><br>
+				<%= f.label :website %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
 							<i class="icon-globe"></i>
 						</span>
-						<%= f.url_field :website, :class => 'form-control input-small' %>					
+						<%= f.url_field :website, :class => 'form-control input-small' %>
 					</div>
 				</div>
+				<span class="help-block">Prefix URL with 'http://'</span>
 				<br>
 			</div>
 
 			<div class="control-group">
-				<%= f.label :github %><br>
+				<%= f.label :github %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -70,7 +85,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label :linkedin %><br>
+				<%= f.label :linkedin %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -83,7 +98,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label :twitter %><br>
+				<%= f.label :twitter %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -96,7 +111,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label :interests %><br>
+				<%= f.label :interests %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -109,7 +124,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label :specialty %><br>
+				<%= f.label :specialty %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -121,18 +136,6 @@
 				<br>
 			</div>
 
-			<div class="control-group">
-				<%= f.label :expectation %><br>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-magic"></i>
-						</span>
-						<%= f.text_field :expectation, :class => 'form-control input-small' %>					
-					</div>
-				</div>
-				<br>
-			</div>
 
 			<div class="control-group">
 				<br>
