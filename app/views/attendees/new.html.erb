@@ -1,151 +1,184 @@
 <div class="container">
 	<h2 class="lato">Register for DevCongress 2013</h2>
 
-	<%= form_for(@attendee) do |f| %>
-		<% if @attendee.errors.any? %>
-			<div id="error-explanation">
-				<div class="alert alert-danger alert-block open-sans">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<h4 class="open-sans">Ouch, there were <%= pluralize @attendee.errors.count, 'error' %>. Let's give this another shot!</h4>
-					<ul>
-					<% @attendee.errors.full_messages.each do |msg| %>
-						<li class="error-message"><%= msg %></li>
-					<% end %>
-				</ul>
-				</div>
-			</div>
-		<% end %>
+	<div class="row">
 
-		<div class="col-lg-4">
-			<div class="control-group">
-				<%= f.label :name %><small class="gray"> (required)</small>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-user"></i>
-						</span>
-						<%= f.text_field :name, :class => 'form-control input-small' %>					
+		<div class="col-6">	
+
+			<%= form_for(@attendee) do |f| %>
+				<% if @attendee.errors.any? %>
+					<div id="error-explanation">
+						<div class="alert alert-danger alert-block open-sans">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<h4 class="open-sans">Ouch, there were <%= pluralize @attendee.errors.count, 'error' %>. Let's give this another shot!</h4>
+							<ul>
+							<% @attendee.errors.full_messages.each do |msg| %>
+								<li class="error-message"><%= msg %></li>
+							<% end %>
+						</ul>
+						</div>
 					</div>
-				</div>
-				<br>
-			</div>
+				<% end %>
 
-			<div class="control-group">
-				<%= f.label :email %><small class="gray"> (required)</small>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-envelope"></i>
-						</span>
-						<%= f.text_field :email, type: :email, :class => 'form-control input-small' %>					
+				<div class="col">
+					<div class="control-group">
+						<%= f.label :name %><small class="gray"> (required)</small>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-user"></i>
+								</span>
+								<%= f.text_field :name, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>	
 
-			
-			<div class="control-group">
-				<%= f.label :expectation %><small class="gray"> (required)</small>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-magic"></i>
-						</span>
-						<%= f.text_field :expectation, :class => 'form-control input-small' %>					
+					<div class="control-group">
+						<%= f.label :email %><small class="gray"> (required)</small>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-envelope"></i>
+								</span>
+								<%= f.text_field :email, type: :email, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
+					</div>	
+
+					
+					<div class="control-group">
+						<%= f.label :expectation %><small class="gray"> (required)</small>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-magic"></i>
+								</span>
+								<%= f.text_field :expectation, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>
-		
-			<div class="control-group">
-				<%= f.label :website %>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-globe"></i>
-						</span>
-						<%= f.url_field :website, :class => 'form-control input-small' %>
+				
+					<div class="control-group">
+						<%= f.label :website %>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-globe"></i>
+								</span>
+								<%= f.url_field :website, :class => 'form-control input-small' %>
+							</div>
+						</div>
+						<span class="help-block">Prefix URL with 'http://'</span>
+						<br>
 					</div>
-				</div>
-				<span class="help-block">Prefix URL with 'http://'</span>
-				<br>
-			</div>
 
-			<div class="control-group">
-				<%= f.label :github %>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-github"></i>
-						</span>
-						<%= f.text_field :github, :class => 'form-control input-small' %>					
+					<div class="control-group">
+						<%= f.label :github %>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-github"></i>
+								</span>
+								<%= f.text_field :github, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>
 
-			<div class="control-group">
-				<%= f.label :linkedin %>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-linkedin"></i>
-						</span>
-						<%= f.text_field :linkedin, :class => 'form-control input-small' %>					
+					<div class="control-group">
+						<%= f.label :linkedin %>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-linkedin"></i>
+								</span>
+								<%= f.text_field :linkedin, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>
 
-			<div class="control-group">
-				<%= f.label :twitter %>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-twitter"></i>
-						</span>
-						<%= f.text_field :twitter, :class => 'form-control input-small' %>					
+					<div class="control-group">
+						<%= f.label :twitter %>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-twitter"></i>
+								</span>
+								<%= f.text_field :twitter, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>
 
-			<div class="control-group">
-				<%= f.label :interests %>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-thumbs-up"></i>
-						</span>
-						<%= f.text_field :interests, :class => 'form-control input-small' %>					
+					<div class="control-group">
+						<%= f.label :interests %>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-thumbs-up"></i>
+								</span>
+								<%= f.text_field :interests, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>
 
-			<div class="control-group">
-				<%= f.label :specialty %>
-				<div class="controls">
-					<div class="input-group">
-						<span class="input-group-addon input-small">
-							<i class="icon-star"></i>
-						</span>
-						<%= f.text_field :specialty, :class => 'form-control input-small' %>					
+					<div class="control-group">
+						<%= f.label :specialty %>
+						<div class="controls">
+							<div class="input-group">
+								<span class="input-group-addon input-small">
+									<i class="icon-star"></i>
+								</span>
+								<%= f.text_field :specialty, :class => 'form-control input-small' %>					
+							</div>
+						</div>
+						<br>
 					</div>
-				</div>
-				<br>
-			</div>
 
 
-			<div class="control-group">
-				<br>
-				<div class="input-group form-last">
-						<%= f.submit 'I am attending DevCongress so Sign me up!', type: :submit, :class => 'btn btn-success' %>
+					<div class="control-group">
+						<br>
+						<div class="input-group form-last">
+								<%= f.submit 'I am attending DevCongress so Sign me up!', type: :submit, :class => 'btn btn-success' %>
+						</div>
+					</div>
+
 				</div>
-			</div>
+
+			<% end %>
 
 		</div>
-
-	<% end %>
+		<div class="col-6">
+			
+			<section>
+				<h4 class="lato">Just a little info about DevCongress</h4>
+				<p>
+					DevCongress is a budding developers movement aimed at becoming the most vibrant across the software developers space in Ghana and Africa. The objectives are very simple.
+				</p>
+					<ol>
+						<li>To build confidence among software developers in Ghana and Africa for that matter by giving them the opportunity to share what they know and to challenge them to do more. In short, build a reputation among the developer community.
+						</li>
+						<li>
+							Expose developers to a rich array of resources by which they can develop themselves to international standards and make world impact.
+						</li>
+						<li>
+							Contribute to open source projects that has great social and economic impact on their country and the software development scene. Leave a legacy.
+						</li>
+						<li>
+							Harness the combined talent and resources of the local tech community to create solutions to national problems that will be open sourced and jointly owned by all participants for national good.
+						</li>
+					</ol>
+				<p>
+					At this year's congress, we will be focusing on two key areas of discussion namely cashless payment systems in Ghana and the way forward. On the panel will be seasoned finance experts, a government official, a software developer among other.
+				</p>
+			</section>
+		</div>
+		
+	</div>
 	
 </div>

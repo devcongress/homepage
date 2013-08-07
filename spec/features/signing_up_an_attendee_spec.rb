@@ -23,7 +23,7 @@ feature 'Signing Up an Attendee' do
 		expect(page).to have_content 'Yay! You are definitely attending DevCongress :)'
 		expect(page.current_url).to eql(agenda_url)
 
-		title = 'Playground'
+		title = 'Register for DevCongress'
 		expect(page).to have_title title
 
 		email = find_email! 'girl@developer.me'
