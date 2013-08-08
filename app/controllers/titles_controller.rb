@@ -15,7 +15,7 @@ class TitlesController < ApplicationController
 		if @title.save
 			TitleNotifier.submission_successful(@title).deliver
 			
-			# flash[:success] = 'Your title has been submitted for consideration. Thank you!'
+			flash[:success] = 'Your title has been submitted for consideration. Thank you!'
 			redirect_to titles_path
 		else
 			render 'new'
