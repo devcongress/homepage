@@ -3,7 +3,7 @@
 
 	<div class="row">
 
-		<div class="col-6">	
+		<div class="col-5">	
 
 			<%= form_for(@attendee) do |f| %>
 				<% if @attendee.errors.any? %>
@@ -20,7 +20,7 @@
 					</div>
 				<% end %>
 
-				<div class="col">
+				<div class="">
 					<div class="control-group">
 						<%= f.label :name %><small class="gray"> (required)</small>
 						<div class="controls">
@@ -55,7 +55,10 @@
 								<span class="input-group-addon input-small">
 									<i class="icon-magic"></i>
 								</span>
-								<%= f.text_field :expectation, :class => 'form-control input-small' %>					
+								<%= f.text_area :expectation,
+									:class => 'form-control input-small',
+									rows: '5'
+								%>					
 							</div>
 						</div>
 						<br>
@@ -153,10 +156,13 @@
 			<% end %>
 
 		</div>
+
+		<div class="col-1"></div>
+
 		<div class="col-6">
 			
 			<section>
-				<h4 class="lato">Just a little info about DevCongress</h4>
+				<h4 class="lato">What DevCongress is</h4>
 				<p>
 					DevCongress is a budding developers movement aimed at becoming the most vibrant across the software developers space in Ghana and Africa. The objectives are very simple.
 				</p>
@@ -164,17 +170,17 @@
 						<li>To build confidence among software developers in Ghana and Africa for that matter by giving them the opportunity to share what they know and to challenge them to do more. In short, build a reputation among the developer community.
 						</li>
 						<li>
-							Expose developers to a rich array of resources by which they can develop themselves to international standards and make world impact.
+							Expose developers to a rich array of resources by which they can develop themselves to international standards and make global impact.
 						</li>
 						<li>
-							Contribute to open source projects that has great social and economic impact on their country and the software development scene. Leave a legacy.
+							Contribute to open source projects that have great social and economic impact on their country and the software development scene. Leave a legacy.
 						</li>
 						<li>
 							Harness the combined talent and resources of the local tech community to create solutions to national problems that will be open sourced and jointly owned by all participants for national good.
 						</li>
 					</ol>
 				<p>
-					At this year's congress, we will be focusing on two key areas of discussion namely cashless payment systems in Ghana and the way forward. On the panel will be seasoned finance experts, a government official, a software developer among other.
+					At this year's congress, we will be focusing on two key areas of discussion namely cashless payment systems in Ghana and the way forward. On the panel will be seasoned finance experts, a government official, a software developer among others.
 				</p>
 			</section>
 		</div>
