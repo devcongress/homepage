@@ -1,15 +1,15 @@
-<h2 class="lato">Here, all titles submitted for consideration</h2>
 <div class="open-sans">
 	<% unless @titles.empty? %>
 		<ul>
 			<% @titles.each do |ttl| %>
-				<li class="f17"><%= link_to ttl.title, ttl %> (<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
-						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %>
-						<i> <%= time_ago_in_words ttl.created_at %> ago.</i>
+				<li class="f17">
+					<h2 class="submitted-title"><%= link_to ttl.title, ttl %></h2>
+					<span class="submitted-title-extra">(<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
+						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %> <i><%= time_ago_in_words ttl.created_at %> ago.</i></span>
 				</li>
 			<% end %>
 		</ul>
 	<% end %>
 </div>
+<h2 class="open-sans f17" style="margin-top:3%;font-style:italic;">Got something to share or something missing? <span class="appeal"><%= link_to 'Click here to submit it', submit_title_path %></span></h2>
 <br>
-<p class="open-sans">Didn't see the title you were looking for? <%= link_to 'Submit it for consideration', submit_title_path %></p>
