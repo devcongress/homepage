@@ -4,13 +4,13 @@
 			<% @titles.each do |ttl| %>
 				<li class="f17 btm-border">
 					<h2 class="submitted-title"><%= link_to ttl.title, ttl %></h2>
-					<p style="font-family:georgia,serif;color:#ec008b;"><i><%= ttl.relevance %></i></p>
-					<span class="submitted-title-extra br10">(<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
-						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %> <i><%= time_ago_in_words ttl.created_at %> ago.</i></span>
+					<p style="font-family:georgia,serif;color:#f0548b;"><i><%= ttl.relevance %></i></p>
+					<span class="submitted-title-extra br10">Submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %> <span class="time"><%= time_ago_in_words ttl.created_at %> ago</span>. <i><%= link_to (pluralize ttl.comments.count, 'comment'), "#{title_path(ttl)}#comments" %></i>
+					</span>
 				</li>
 			<% end %>
 		</ul>
 	<% end %>
 </div>
-<h2 class="open-sans f17" style="margin-top:3%;font-style:italic;padding:1%;border-radius:4px;background:rgba(200,10,40,.3);">Got something to share or something missing? <span class="appeal"><%= link_to 'Click here to submit it', submit_title_path %></span></h2>
+<h2 class="open-sans f17" style="margin-top:3%;padding:1%;border-radius:4px;background:rgba(200,10,40,.3);">Got something to share or something missing? <span class="appeal"><%= link_to 'Click here to submit it', submit_title_path %></span></h2>
 <br>
