@@ -2,14 +2,15 @@
 	<% unless @titles.empty? %>
 		<ul>
 			<% @titles.each do |ttl| %>
-				<li class="f17">
+				<li class="f17 btm-border">
 					<h2 class="submitted-title"><%= link_to ttl.title, ttl %></h2>
-					<span class="submitted-title-extra">(<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
+					<p style="font-family:georgia,serif;color:#ec008b;"><i><%= ttl.relevance %></i></p>
+					<span class="submitted-title-extra br10">(<%= link_to (pluralize ttl.comments.count, 'comment'), title_comments_path(ttl) %>) 
 						submitted by <%= mail_to ttl.submitter_email, ttl.submitter_name %> <i><%= time_ago_in_words ttl.created_at %> ago.</i></span>
 				</li>
 			<% end %>
 		</ul>
 	<% end %>
 </div>
-<h2 class="open-sans f17" style="margin-top:3%;font-style:italic;">Got something to share or something missing? <span class="appeal"><%= link_to 'Click here to submit it', submit_title_path %></span></h2>
+<h2 class="open-sans f17" style="margin-top:3%;font-style:italic;padding:1%;border-radius:4px;background:rgba(200,10,40,.3);">Got something to share or something missing? <span class="appeal"><%= link_to 'Click here to submit it', submit_title_path %></span></h2>
 <br>
