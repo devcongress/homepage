@@ -12,5 +12,6 @@ Devconf::Application.routes.draw do
   match '/submit_title', 	to: 'titles#new', 	 	via: :get
   match '/speakers',			to: 'pages#speakers',	via: :get
   match '/about',         to: 'pages#about',    via: :get
+	match '/reg',						to: 'pages#reg',			via: :get
   # match '/speak',  to: 'pages#speak',  via: :get
 end
