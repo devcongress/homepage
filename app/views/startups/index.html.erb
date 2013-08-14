@@ -1,0 +1,6 @@
+<% provide :title, 'Startups Exhibiting @ DevCongress 2013' %>
+<% unless @startups.empty? %>
+	<%= render 'startups/exhibiting_startups' %>
+<% else %>
+	<%= render 'startups/no_startups_registered' %>
+<% end %>
