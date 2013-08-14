@@ -15,8 +15,7 @@
 			<% flash.each do |key, value| %>
 				<div class="alert alert-success alert-block open-sans  <%= key %>" id="<%= value %>">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<h4 class="open-sans">Great! You're on board.</h4>
-					<%= value %>
+					<h4 class="open-sans"><%= value %></h4>
 				</div>
 			<% end %>
 			

@@ -1,14 +1,15 @@
 require 'spec_helper'
 
 feature 'Viewing titles' do
-	before do
-		@wading_through_js = FactoryGirl.create :title, title: 'Wading Through JavaScript MVC Jungle'
-		@comment_wading_js = FactoryGirl.create :comment, title: @wading_through_js
 
-		@database_normalization 	= FactoryGirl.create :title, title: 'Database Normalization For Fast Performance'
-		@comment_db_normalization = FactoryGirl.create :comment, title: @database_normalization
+	before do
+		@wading_through_js 				= FactoryGirl.create :title, 		title: 'Wading Through JavaScript MVC Jungle'
+		@comment_wading_js 				= FactoryGirl.create :comment, 	title:  @wading_through_js
+		@database_normalization 	= FactoryGirl.create :title, 		title: 'Database Normalization For Fast Performance'
+		@comment_db_normalization = FactoryGirl.create :comment, 	title:  @database_normalization
 
 		visit titles_url
+
 	end
 
 	scenario 'Listing all submitted titles' do

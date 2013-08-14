@@ -1,0 +1,7 @@
+<% @startups.each do |startup| %>
+	<div class="startup">
+		<p class="startup-name"><%= startup.name %></p>
+		<p class="startup-ceo"><%= startup.ceo %></p>
+		<p class="startup-address"><%= startup.location %></p>
+	</div>
+<% end %>
