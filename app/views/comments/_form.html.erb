@@ -34,7 +34,12 @@
 					<span class="input-group-addon input-small">
 						<i class="icon-comments-alt"></i>
 					</span>
-					<%= f.text_area :comment_body, class: 'comment-input-comment', :class => 'form-control input-small', id: 'comment-body' %>			
+					<%= f.text_area :comment_body,
+						class: 'comment-input-comment',
+						:class => 'form-control input-small',
+						id: 'comment-body',
+						rows: '5'
+					%>			
 				</div>
 			</div>
 			<br>

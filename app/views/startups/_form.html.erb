@@ -1,0 +1,18 @@
+<h1>Update your startup's information</h1>
+<%= form_for @startup do |f| %>
+	<p><%= f.text_field  		:name,	 	 id: 'startup-name',		placeholder: 'e.g. Open University of West Africa' %></p>
+	<p><%= f.email_field 		:email, 	 id: 'startup-email', 	placeholder: 'e.g. ouwa@ouwa.org' %></p>
+	<p><%= f.password_field :password, id: 'startup-password' 	%></p>
+	<p><%= f.text_field 		:ceo,  						id: 'startup-ceo',						 placeholder: 'e.g. John Roberts' %></p>
+	<p><%= f.text_field 		:location, 				id: 'startup-address', 				 placeholder: 'e.g. Hub-Accra, Osu, Accra' %></p>
+	<p><%= f.number_field 	:founding_year,  	id: 'startup-founding-year', 	 placeholder: 'e.g. 2012' %></p>
+	<p><%= f.text_field 		:website, 				id: 'startup-website', 				 placeholder: 'e.g. http://www.ouwa.org' %></p>
+	<p><%= f.text_field 		:twitter, 				id: 'startup-twitter', 				 placeholder: 'e.g. OUWAghana' %></p>
+	<p><%= f.text_field 		:facebook, 				id: 'startup-twitter', 				 placeholder: 'e.g. ouwa' %></p>
+	<p><%= f.text_field 		:github, 					id: 'startup-github', 				 placeholder: 'e.g. ouwa' %></p>
+	<p><%= f.text_field			:product, 				id: 'startup-product',				 placeholder: 'e.g. OUWA Learning Platform' %></p>
+	<p><%= f.text_field			:product_tagline,	id: 'startup-product_tagline', placeholder: 'e.g. Education for all, beginning in Africa' %></p>
+	<p><%= f.text_area			:ceo_bio,					id: 'startup-ceo_bio', 				 placeholder: 'e.g. John is a cool kid' %></p>
+	<p><%= f.text_area			:technologies,		id: 'startup-technologies', 	 placeholder: 'e.g. Django, Python, AWS, Node.js, Angular' %></p>
+	<p><%= f.text_area			:product_description,	id: 'startup-product_tagline', placeholder: 'e.g. Education for all, beginning in Africa' %></p
+<% end %>

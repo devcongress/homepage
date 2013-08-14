@@ -2,7 +2,8 @@ Devconf::Application.routes.draw do
   root to: 'pages#index'
 
   resources :attendees
-  
+  resources :startups
+    
   resources :titles do
   	resources :comments
   end
@@ -12,5 +13,7 @@ Devconf::Application.routes.draw do
   match '/submit_title', 	to: 'titles#new', 	 	via: :get
   match '/speakers',			to: 'pages#speakers',	via: :get
   match '/about',         to: 'pages#about',    via: :get
-  # match '/speak',  to: 'pages#speak',  via: :get
+	match '/reg',						to: 'pages#reg',			via: :get
+  match '/exhibit',       to: 'startups#new',   via: :get
+
 end

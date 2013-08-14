@@ -1,0 +1,8 @@
+<% provide :title, 'Exhibtion Registration' %>
+<%= form_for @startup do |f| %>
+	<p><%= f.text_field  		:name,	 	 id: 'startup-name',		placeholder: 'e.g. Open University of West Africa' %></p>
+	<p><%= f.email_field 		:email, 	 id: 'startup-email', 	placeholder: 'e.g. ouwa@ouwa.org' %></p>
+	<p><%= f.password_field :password, id: 'startup-password' 	%></p>
+
+	<p><%= f.submit 				'Register us for the exhibition :)' %></p>
+<% end %>
