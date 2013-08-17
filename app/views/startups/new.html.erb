@@ -1,8 +1,75 @@
 <% provide :title, 'Exhibtion Registration' %>
-<%= form_for @startup do |f| %>
-	<p><%= f.text_field  		:name,	 	 id: 'startup-name',		placeholder: 'e.g. Open University of West Africa' %></p>
-	<p><%= f.email_field 		:email, 	 id: 'startup-email', 	placeholder: 'e.g. ouwa@ouwa.org' %></p>
-	<p><%= f.password_field :password, id: 'startup-password' 	%></p>
 
-	<p><%= f.submit 				'Register us for the exhibition :)' %></p>
-<% end %>
+
+<div class="container">
+	<h2 class="lato">Register for an exhibition at DevCongress 2013</h2>
+
+	<%= form_for @startup do |f| %>
+
+		<div class="col-lg-4">
+			<div class="control-group">
+				<%= f.label 'Startup Name' %>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-user"></i>
+						</span>
+						<%= f.text_field :name,
+							:class => 'form-control input-small',
+							id: 'startup-name',
+							placeholder: 'e.g. Open University of West Africa'
+						%>		
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label 'Startup email' %>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-envelope"></i>
+						</span>
+						<%= f.email_field :email,
+							:class => 'form-control input-small',
+							id: 'startup-email',
+							placeholder: 'e.g. ouwa@ouwa.org'
+						%>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<%= f.label 'Password' %>
+				<div class="controls">
+					<div class="input-group">
+						<span class="input-group-addon input-small">
+							<i class="icon-lock"></i>
+						</span>
+						<%= f.password_field :password,
+							:class => 'form-control input-small',
+							id: 'startup-password'
+						%>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="control-group">
+				<br>
+				<div class="input-group form-last">
+					<%= f.submit 'Register for the exhibition :)',
+						type: :submit,
+						:class => 'btn btn-success'
+					%>
+				</div>
+			</div>
+
+		</div>
+
+		
+	<% end %>
+
+</div>
