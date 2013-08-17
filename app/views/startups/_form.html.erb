@@ -1,10 +1,12 @@
 <div class="container">
-	<h3 class="lato">Update your startup's information</h3>
+	<h2 class="lato" style="margin-bottom: 2%;"><%= @startup.name %></h2>
+	<p class="announcement">Note: We'd represent your startup with this information in our Startup Directory</p>
 
 	<%= form_for @startup do |f| %>
 		<div class="col-lg-4">
 	
 			<div class="control-group">
+				<%= f.label :name %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -12,17 +14,21 @@
 						</span>
 						<%= f.text_field :name,
 							id: 'startup-name',
-							placeholder: 'e.g. Open University of West Africa'
-							:class => 'form-control input-small',
+							placeholder: 'e.g. Open University of West Africa',
+							class: 'form-control input-small'
 						%>			
 					</div>
 					<br>
 				</div>
 			</div>
 
+			<div class="control-group">
+				<%= f.file_field :logo %>
+			</div>
+
 
 			<div class="control-group">
-				<%= f.label 'Startup Email' %><small class="gray"> (required)</small>
+				<%= f.label 'What\'s your main contact email?' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -30,8 +36,8 @@
 						</span>
 						<%= f.email_field :email,
 							id: 'startup-email',
-							placeholder: 'e.g. ouwa@ouwa.org'
-							:class => 'form-control input-small',
+							placeholder: 'e.g. ouwa@ouwa.org',
+							class: 'form-control input-small'
 						%>
 					</div>
 				</div>
@@ -40,14 +46,14 @@
 
 
 			<div class="control-group">
-				<%= f.label 'Password' %><small class="gray"> (required)</small>
+				<%= f.label 'Password' %><small class="gray"> (would be used for authentication)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
 							<i class="icon-lock"></i>
 						</span>
 						<%= f.password_field :password,
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							id: 'startup-password'
 						%>
 					</div>
@@ -56,7 +62,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Startup CEO' %><small class="gray"> (required)</small>
+				<label for="startup[ceo]">CEO <small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -64,16 +70,17 @@
 						</span>
 						<%= f.text_field :ceo,
 							id: 'startup-ceo',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. John Roberts'
 						%>
 					</div>
 				</div>
+				</label>
 				<br>
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Location' %><small class="gray"> (required)</small>
+				<%= f.label 'What\'s the address to your main office?' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -81,7 +88,7 @@
 						</span>
 						<%= f.text_field :location,
 							id: 'startup-address',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. Hub-Accra, Osu, Accra'
 						%>
 					</div>
@@ -90,7 +97,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Startup Founding Year' %><small class="gray"> (required)</small>
+				<%= f.label 'In which year were you founded?' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -98,8 +105,9 @@
 						</span>
 						<%= f.number_field :founding_year,
 							id: 'startup-founding-year',
-							:class => 'form-control input-small',
-							placeholder: 'e.g. 2012'
+							class: 'form-control input-small',
+							placeholder: 'e.g. 2012',
+							:min => '1990'
 						%>
 					</div>
 				</div>
@@ -107,7 +115,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Website' %><small class="gray"> (required)</small>
+				<%= f.label 'Your website' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -115,7 +123,7 @@
 						</span>
 						<%= f.text_field :website,
 							id: 'startup-website',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. http://www.ouwa.org'
 						%>
 					</div>
@@ -125,7 +133,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Twitter Handle' %>
+				<%= f.label 'Twitter' %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -133,7 +141,7 @@
 						</span>
 						<%= f.text_field :twitter,
 							id: 'startup-twitter',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. OUWAghana'
 						%>
 					</div>
@@ -150,7 +158,7 @@
 						</span>
 						<%= f.text_field :facebook,
 							id: 'startup-facebook',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. ouwa'
 						%>
 					</div>
@@ -160,7 +168,7 @@
 
 
 			<div class="control-group">
-				<%= f.label 'Github' %>
+				<%= f.label 'Github organization name (in case you have one)' %>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -168,7 +176,7 @@
 						</span>
 						<%= f.text_field :github,
 							id: 'startup-github',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. ouwa'
 						%>
 					</div>
@@ -178,7 +186,7 @@
 
 
 			<div class="control-group">
-				<%= f.label 'Main Product' %><small class="gray"> (required)</small>
+				<%= f.label 'What\'s your flagship product?' %><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -186,7 +194,7 @@
 						</span>
 						<%= f.text_field :product,
 							id: 'startup-product',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. OUWA Learning Platform'
 						%>
 					</div>
@@ -195,7 +203,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Product tagline' %>
+				<label for="startup[product_tagline]">... and it's tagline</label>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -203,7 +211,7 @@
 						</span>
 						<%= f.text_field :product_tagline,
 							id: 'startup-product_tagline',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. Education for all, beginning in Africa'
 						%>
 					</div>
@@ -212,7 +220,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'CEO Bio' %><small class="gray"> (required)</small>
+				<label for="startup[ceo_bio]">A little something about your CEO</label><small class="gray"> (required)</small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -220,7 +228,7 @@
 						</span>
 						<%= f.text_area :ceo_bio,
 							id: 'startup-ceo_bio',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. John is a cool kid',
 							rows: 5
 						%>
@@ -230,7 +238,7 @@
 			</div>
 
 			<div class="control-group">
-				<%= f.label 'Technologies you use in development' %><small class="gray"> (required)</small>
+				<%= f.label 'Technologies you use in development' %><small class="gray"></small>
 				<div class="controls">
 					<div class="input-group">
 						<span class="input-group-addon input-small">
@@ -238,7 +246,7 @@
 						</span>
 						<%= f.text_area :technologies,
 							id: 'startup-technologies',
-							:class => 'form-control input-small',
+							class: 'form-control input-small',
 							placeholder: 'e.g. Django, Python, AWS, Node.js, Angular'
 						%>
 					</div>
@@ -246,7 +254,7 @@
 				<br>
 			</div>
 
-
+			<%= f.submit 'Update profile' %>
 		</div>
 	<% end %>
 
