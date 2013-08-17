@@ -13,8 +13,7 @@ class TitlesController < ApplicationController
 	def create
 		@title = Title.new title_params
 		if @title.save
-			TitleNotifier.submission_successful(@title).deliver
-			
+			TitleNotifier.submission_successful(@title).deliver			
 			flash[:success] = 'Your title has been submitted for consideration. Thank you!'
 			redirect_to titles_path
 		else
