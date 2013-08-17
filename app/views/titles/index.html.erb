@@ -1,6 +1,7 @@
 <% provide :title, 'Submitted titles' %>
 
 <div class="container">
+	<h3 class="lato text-center">Sorry, all titles have been submitted now.<small><%= link_to ' Follow us on Twitter for the latest updates.', "http://twitter.com/DevCongress" %></small></h3>
 	<% if @titles.empty? %>
 		<%= render 'no_titles_yet' %>
 	<% else %>
