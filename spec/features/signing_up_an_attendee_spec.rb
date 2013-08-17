@@ -4,7 +4,7 @@ feature 'Signing Up an Attendee' do
 
 	before do
 		visit '/'
-		click_link 'Register'
+		click_link 'Attend'
 	end
 
 	scenario 'can signup an attendee' do

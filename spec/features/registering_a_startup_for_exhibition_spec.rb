@@ -8,10 +8,11 @@ feature 'Startup' do
 	end
 
 	scenario 'can register to exhibit at event' do
-		click_link 'Register My Startup'
+		click_link 'Register my startup'
 
 		fill_in 'startup-name', 	with: 'Open University of West Africa'
 		fill_in 'startup-email',	with: 'ouwa@ouwa.org'
+		fill_in 'startup-password', with: 'secure-password-123'
 
 		click_button 'Register us for the exhibition :)'
 
