@@ -5,5 +5,20 @@
 </head>
 <body>
 	<!-- email goes here -->
-</body>
+	<h2>Confirmation of registration of your Startup for <%= link_to 'DevCongress 2013', root_url %> Exhibition</h2>
+	<p>
+	  We received your request to exhibit products from <strong><%= link_to @startup.name, startup_url(@startup) %></strong> at <%= link_to 'DevCongress 2013 edition', root_url %> the <strong>most exciting developers event</strong> in Ghana ever!
+	</p>
+	<p>
+	  This is a good time for you to <%= link_to 'edit your profile', edit_startup_path(@startup)%> on our website. The attendants will be watching, you know? Some more information for them will be just right. :)
+	</p>
+	<p>
+	  The event is on <strong>24th August, 2013 at the Meltwater Entrepreneurial School of Technology</strong> (<%= link_to 'map', 'http://goo.gl/maps/ElhoK' %>). We would need you to be abreast with some information. Please visit this URL to find out how both of us can work to make DevCongress a success.
+	</p>
+	<p>
+	  Find out <%= link_to 'here', agenda_url %> what will be happening on Saturday. 
+	</p>
+	<p>See you then.</p>
+	<p>Claude & <%= link_to 'DevCongress', about_url %></p>
+	</body>
 </html>
