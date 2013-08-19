@@ -7,7 +7,8 @@ class TitlesController < ApplicationController
 	end
 
 	def new
-		@title = Title.new
+		# @title = Title.new
+		redirect_to titles_path
 	end
 
 	def create
