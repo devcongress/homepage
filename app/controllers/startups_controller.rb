@@ -7,7 +7,8 @@ class StartupsController < ApplicationController
   end
 
   def new
-  	@startup = Startup.new
+  	redirect_to root_url
+		#@startup = Startup.new
   end
 
   def create
