@@ -3,11 +3,12 @@ class StartupsController < ApplicationController
 	before_action :set_startup, only: [ :show, :edit, :update ]
 
   def index
-  	@startups = Startup.all
+		redirect_to root_path
+  	#@startups = Startup.all
   end
 
   def new
-  	redirect_to root_url
+  	redirect_to root_path
 		#@startup = Startup.new
   end
 
@@ -21,11 +22,11 @@ class StartupsController < ApplicationController
   	end
   end
 
-  def edit
-  end
+  #def edit
+  #end
 
-  def show
-  end
+  #def show
+  #end
 
   def update
     if @startup.password == update_startup_params[:password]

@@ -15,7 +15,7 @@ Devconf::Application.routes.draw do
   match '/about',         to: 'pages#about',        via: :get
 	match '/reg',						to: 'pages#reg',			    via: :get
   match '/requirements',  to: 'pages#requirements', via: :get
-
+	match '/say_thanks',		to: 'pages#say_thanks',		via: :get
   # match '/exhibit',       to: 'startups#new',   via: :get
 
 end
