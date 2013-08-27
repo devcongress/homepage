@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
 
 	def say_thanks
-		Notifier.say_thanks
+		Notifier.thank_you
 		render text: 'Ok, I\'m done saying thanks :/'
 	end
 end
