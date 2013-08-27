@@ -17,4 +17,9 @@ class PagesController < ApplicationController
 
   def requirements
   end
+
+	def say_thanks
+		Notifier.say_thanks
+		render text: 'Ok, I\'m done saying thanks :/'
+	end
 end

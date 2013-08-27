@@ -3,7 +3,8 @@ class AttendeesController < ApplicationController
 	end
 
 	def new
-		@attendee = Attendee.new
+		redirect_to root_path
+		#@attendee = Attendee.new
 	end
 
 	def create
