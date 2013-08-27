@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
-  default from: 		'devcongress@gmail.com',
-  				reply_to: 'devcongress@gmail.com'
+  default 			to: Proc.new { ThankYouList.pluck(:email) },
+							from: 'devcongress@gmail.com'
 
   def comments_updated(comment)
   	@comment = comment
@@ -9,10 +9,7 @@ class Notifier < ActionMailer::Base
   end
 
 	def thank_you
-		mail(
-					 to: Proc.new { ThankYouList.pluck :email },
-			subject: 'Thank you for making DevCongress successful. You\'re awesome!'
-		)
+		mail(subject: 'Thank you for making DevCongress successful. You\'re awesome!')
 	end
 
 end
