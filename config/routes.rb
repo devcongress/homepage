@@ -1,5 +1,5 @@
 Devconf::Application.routes.draw do
-  root to: 'pages#index'
+  root to: 'pages#thankyou'
 
   resources :attendees
   # resources :startups
