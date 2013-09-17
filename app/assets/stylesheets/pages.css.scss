@@ -2,11 +2,7 @@ html {
     overflow-y: scroll;
 }
 body {
-    /*background-image: url(https://dl.dropboxusercontent.com/u/64058349/bg.png);*/
-    /*background-repeat: repeat-x;*/
-    font-family: 'Open Sans', sans-serif;
     height: 100%;
-
 }
 .main {
     min-height:100%;
@@ -15,6 +11,7 @@ body {
     background-color: #ecf0f1;
     color: #2c3e50;
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
+    font-size: 16px;
 }
 .footer {
     height: 100px;
@@ -23,15 +20,14 @@ body {
 a:hover, a:focus {
     text-decoration: none;
 }
-.navbar {
-    /*background-color: transparent;*/
-
+.navbar-default{
+    font-family: 'Montserrat', sans-serif;
 }
 .center {
     vertical-align: center;
 }
 .open-sans {
-    font-family: 'Open Sans'
+    font-family: 'Open Sans';
 }
 .lato {
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
@@ -57,25 +53,17 @@ a:hover, a:focus {
 }
 @media screen and (min-width:40em) {
     .nav {
-        list-style: none;
         margin: 0 0 3em;
         padding: 0;
-        text-align: right;
     }
     .nav li {
         display: inline;
     }
     .nav a {
         vertical-align: middle;
-        display: inline-block;
-        padding: 10px;
         font-weight: 700;
         letter-spacing: 1px;
     }
-}
-.conspicuous {
-    font-size: 1.1em;
-    background: rgba(20, 70, 30, .2);
 }
 .appeal {
     a {
