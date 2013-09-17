@@ -1,27 +1,35 @@
-<div class="fauna f17">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	</button>
-
-	<a class="navbar-brand" href="/">DevCongress</a>
-
-	<div class="nav-collapse collapse navbar-responsive-collapse">
-		<ul class="nav navbar-nav pull-right">
-			<!-- <li class="navlinks conspicuous"><%= link_to 'REGISTER', register_path %></li> -->
-			<li class="navlinks"><%= link_to 'Home', root_path %></li>
-			<li class="navlinks"><%= link_to 'About', about_path %></li>
-			<!-- <li class="navlinks"><%= link_to 'Agenda', agenda_path %></li> -->
-          	<li>
-              	<%= link_to image_tag("facebook.png"), "http://facebook.com/devcongress" %>
-          	</li>
-			<li>
-				<%= link_to image_tag("twitter.png"), "http://twitter.com/devcongress" %>
-			</li>
-			<li>
-				<%= link_to image_tag("googleplus.png"), "http://gplus.to/devcongress" %>
-			</li>
-		</ul>
-	</div><!-- /.nav-collapse -->
-</div><!-- /.container -->
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">DevCongress</a>
+				</div>
+				<div class="collapse navbar-responsive-collapse navbar-collapse">
+					<ul class="nav pull-right navbar-nav">
+						<li>
+							<%= link_to 'ABOUT', "#about" %>
+						</li>
+						<li>
+							<%= link_to 'PROJECTS', "#projects" %>
+						</li>
+						<li>
+							<%= link_to 'SPONSORS', "#partners" %>
+						</li>
+						<li>
+							<%= link_to 'CONTACT', "#contact" %>
+						</li>
+						<li>
+							<%= link_to 'BLOG', "http://news.devcongress.com" %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

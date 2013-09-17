@@ -8,8 +8,6 @@
 	<div class="main">		
 		
 		<div class="navbar"><%= render 'layouts/navbar' %></div>
-		<div class="logo"><%= link_to image_tag("devcon2013.png"), root_path %></div>
-		<!-- <div class="tagline"><p>Tech Conference for Developers in Ghana</p></div> -->
 
 		<div class="flash container">
 			<% flash.each do |key, value| %>
@@ -21,7 +19,6 @@
 			
 			<%= yield %>
 		</div>
-		<!-- <div class="push"></div> -->
 	</div>
 
 	<%= render 'layouts/footer_scripts' %>
