@@ -1,0 +1,17 @@
+<%= form_for @hacker do |f| %>
+	<% if @hacker.errors.any? %>
+	<div class="errors">
+		<ul>
+			<% @hacker.errors.full_messages do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<p><%= f.text_field 	:name, 		id: 'hacker-name', 						placeholder: 'How do you wanna be called?', autofocus: true %></p
+	<p><%= f.email_field 	:email, 	id: 'hacker-email', 					placeholder: 'Email address' %></p
+	<p><%= f.text_field 	:github, 	id: 'hacker-github-username', placeholder: 'on Github? Your username' %></p>
+	<p><%= f.text_field 	:twitter, id: 'hacker-twitter-handle', 	placeholder: 'on Twitter? Your handle' %></p
+	<p><%= f.text_field :language, 	id: 'hacker-pet-language', 		placeholder: 'Your pet programming language' %></p>
+	<p><%= f.submit 'Let\'s do this!' %></p
+<% end %>
