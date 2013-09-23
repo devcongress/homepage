@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827141500) do
+ActiveRecord::Schema.define(version: 20130923014948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,18 @@ ActiveRecord::Schema.define(version: 20130827141500) do
   end
 
   add_index "comments", ["title_id"], name: "index_comments_on_title_id", using: :btree
+
+  create_table "hackers", force: true do |t|
+    t.string   "name"
+    t.string   "github"
+    t.string   "twitter"
+    t.string   "email"
+    t.string   "language"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hackers", ["email"], name: "index_hackers_on_email", unique: true, using: :btree
 
   create_table "startups", force: true do |t|
     t.string   "name"

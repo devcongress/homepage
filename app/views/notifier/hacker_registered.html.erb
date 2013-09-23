@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			.mono-font { font-family: monaco, menlo, consolas, monospace; }
+			div {
+				font-family: monaco, menlo, consolas, monospace;
+				font-weight: 200;
+			}
+
+			h1 {
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="mono-font"><span style="color:#a65400">Way to go,</span> <%= @hacker.name.split.first %></h1>
+		<div>
+			<p>The <%= link_to 'MPower Payments API', 'http://mpowerpayments.com/developers/index.html' %> is the single most complete API for online payments and purchases in Ghana. On Saturday, October 5, 2013. We're (when I say _we_ I mean you are included!) spelunking the API!</p>
+
+			<p>We have special arrangements for everybody because not everybody coming will be a developer. So if you're a developer, make it easier for us to identify you by trying your hands on <%= link_to 'a couple of challenges we put together here' , "https://github.com/devcongress/hckthn/wiki/DevCongress'-MPower-Payments-API-Hackathon" %>. Instructions related to the challenges are provided there. Don't panic, they're pretty easy challenges ;)</p>
+
+			<p>I'd keep you posted on further developments in the build up to the hackathon.</p>
+
+			<p>Let's do this!</p>
+
+			<p>Yaw <%= link_to '@22bytes', 'https://twitter.com/@22bytes' %></p>
+		</div>
+	</body>
+</html>

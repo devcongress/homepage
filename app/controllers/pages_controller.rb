@@ -22,4 +22,14 @@ class PagesController < ApplicationController
 		Notifier.thank_you
 		render text: 'Ok, I\'m done saying thanks :/'
 	end
+
+  def hack
+    @hacker = Hacker.new
+  end
+
+  def mission
+    # redirects to the Github gist
+    redirect_to "https://github.com/devcongress/hckthn/wiki/DevCongress'-MPower-Payments-API-Hackathon"
+  end
+
 end
