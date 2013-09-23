@@ -29,7 +29,7 @@ class PagesController < ApplicationController
 
   def mission
     # redirects to the Github gist
-    redirect_to 'https://github.com/devcongress/hckthn/blob/master/mpowerpayments-api-hackathon-pre-challenge.md'
+    redirect_to "https://github.com/devcongress/hckthn/wiki/DevCongress'-MPower-Payments-API-Hackathon"
   end
 
 end
