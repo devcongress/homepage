@@ -12,4 +12,10 @@ class Notifier < ActionMailer::Base
 		mail(subject: 'Thank you for making DevCongress successful. You\'re awesome!')
 	end
 
+  def hacker_registered(hacker)
+    @hacker = hacker
+    email_with_name = "#{hacker.name} <#{hacker.email}>"
+    mail(to: email_with_name, subject: "[DevCongress MPower Hackathon] Successful Registration!")
+  end
+
 end
