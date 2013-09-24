@@ -9,9 +9,9 @@ body {
     margin: 0 auto -100px;
     padding: 0 0 100px;
     background-color: #ecf0f1;
-    color: #2c3e50;
+    color: #34495e;
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 .footer {
     height: 100px;
@@ -43,7 +43,8 @@ a:hover, a:focus {
     font-style: normal;
 }
 .blue {
-    color: deepskyblue;
+    /*color: deepskyblue;*/
+    color: #3498db;
 }
 .pink {
     color: deeppink;
@@ -93,9 +94,25 @@ a:hover, a:focus {
 .thanktext {
     padding-right:  -20px;
 }
-.vertical-divider{
-    height:1px;
-    margin:9px 0;
-    overflow:hidden;
-    background-color:#e5e5e5;
+.sponsor-image {
+    img{
+        width: 100%;
+        height: auto;
+    }    
+}
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-logo{
+    padding-top: 20px;
+}
+.number{
+    color: #3498db;
+    font-family: 'Montserrat', sans-serif;
+}
+.title{
+    padding: 10px 0 20px 0
+}
+.sect{
+    min-height: 100%
 }
