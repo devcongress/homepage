@@ -2,7 +2,7 @@
 <h4 class="lato">
 	<p>Saturday, 5th October, 2013</p>
 	<p>8am - 10pm</p>
-	<p>iSpace Foundation, Osu</p>
+	<p>iSpace Foundation, Osu&nbsp; <%= link_to '(map)', 'http://goo.gl/K3Q8QL' %></p>
 	<br><br>
 </h4>
 
@@ -25,7 +25,7 @@
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">
-						<i class="icon-user"></i>
+						<span class="glyphicon glyphicon-user"></span>
 					</span>
 					<%= f.text_field :name,
 				 		id: 'hacker-name',
@@ -42,7 +42,7 @@
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">
-						<i class="icon-mail"></i>
+						<span class="glyphicon glyphicon-envelope"></span>
 					</span>
 					<%= f.email_field :email,
 						id: 'hacker-email',
@@ -58,7 +58,7 @@
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">
-						<i class="icon-mail"></i>
+						<span class="glyphicon glyphicon-cog"></span>
 					</span>
 					<%= f.text_field :github,
 						id: 'hacker-github-username',
@@ -74,7 +74,7 @@
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">
-						<i class="icon-mail"></i>
+						<span class="glyphicon glyphicon-bullhorn"></span>
 					</span>
 					<%= f.text_field :twitter,
 						id: 'hacker-twitter-handle',
@@ -90,7 +90,7 @@
 			<div class="controls">
 				<div class="input-group">
 					<span class="input-group-addon input-small">
-						<i class="icon-mail"></i>
+						<span class="glyphicon glyphicon-star"></span>
 					</span>
 					<%= f.text_field :language,
 						id: 'hacker-pet-language',
