@@ -16,6 +16,8 @@ module Devconf
   # Host for sending email
   config.action_mailer.default_url_options = { host: 'devcongress.com' }
   config.active_record.observers           = [ :comment_observer, :startup_observer ]
+  # config.assets.paths << "#{Rails.root}/app/assets/fonts"
+  config.assets.paths << Rails.root.join("app", "assets", "fonts")
       
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

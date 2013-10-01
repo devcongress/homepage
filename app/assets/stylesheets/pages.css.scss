@@ -35,7 +35,7 @@ a:hover, a:focus {
 .lato {
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
 }
-@font-face {
+/*@font-face {
     font-family: FontAwesome;
     src: url(http://cdn.kde.org/fonts/fontawesome-webfont.eot);
     src: url(http://cdn.kde.org/fonts/fontawesome-webfont.eot?#iefix) format('embedded-opentype'),
@@ -44,7 +44,8 @@ a:hover, a:focus {
         url(http://cdn.kde.org/fonts/fontawesome-webfont.svg#FontAwesome) format('svg');
     font-weight: 400;
     font-style: normal;
-}
+}*/
+
 .blue {
     /*color: deepskyblue;*/
     color: #3498db;
@@ -114,7 +115,9 @@ a:hover, a:focus {
     font-family: 'Montserrat', sans-serif;
 }
 .title{
-    padding: 10px 0 20px 0
+    padding: 10px 0 20px 0;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: bolder
 }
 .sect{
     height: 100%;
