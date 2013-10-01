@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url(font-path('ProximaNova-Bold.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('ProximaNova-Bold.woff')) format('woff'), 
+         url(font-path('ProximaNova-Bold.ttf'))  format('truetype'),
+         url(font-path('ProximaNova-Bold.svg') + "#ProximaNova-Bold") format('svg');
+    font-style: normal;
+}
+/*
 @font-face{
     font-family: 'ProximaNova';
     font-weight: lighter;
@@ -19,4 +28,4 @@
     font-weight: bolder;
     font-style: normal;
     src: url(asset_path('ProximaNova-Extrabold.ttf') format('truetype'));
-}
+}*/
