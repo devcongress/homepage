@@ -14,7 +14,8 @@ body {
     background-color: #ecf0f1;
     color: #34495e;
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
-    font-size: 18px   
+    font-size: 18px;
+    font-weight: 300; 
 }
 .footer {
     height: 100px;
@@ -24,7 +25,19 @@ a:hover, a:focus {
     text-decoration: none;
 }
 .navbar-default{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
+}
+img[alt="Devcongress"]{
+    height: 40px
+}
+.nav.pull-right.navbar-nav{
+    margin-top: 20px;
+}
+.sponsor-image {
+    img{
+        width: 100%;
+        height: auto;
+    }    
 }
 .center {
     vertical-align: center;
@@ -35,19 +48,7 @@ a:hover, a:focus {
 .lato {
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
 }
-/*@font-face {
-    font-family: FontAwesome;
-    src: url(http://cdn.kde.org/fonts/fontawesome-webfont.eot);
-    src: url(http://cdn.kde.org/fonts/fontawesome-webfont.eot?#iefix) format('embedded-opentype'),
-        url(http://cdn.kde.org/fonts/fontawesome-webfont.woff) format('woff'),
-        url(http://cdn.kde.org/fonts/fontawesome-webfont.ttf) format('truetype'),
-        url(http://cdn.kde.org/fonts/fontawesome-webfont.svg#FontAwesome) format('svg');
-    font-weight: 400;
-    font-style: normal;
-}*/
-
 .blue {
-    /*color: deepskyblue;*/
     color: #3498db;
 }
 .pink {
@@ -98,25 +99,16 @@ a:hover, a:focus {
 .thanktext {
     padding-right:  -20px;
 }
-.sponsor-image {
-    img{
-        width: 100%;
-        height: auto;
-    }    
-}
-.montserrat{
-    font-family: 'Montserrat', sans-serif;
-}
-.nav-logo{
-    padding-top: 20px;
+.proxima{
+    font-family: 'ProximaNova', sans-serif;
 }
 .number{
     color: #3498db;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
 }
 .title{
     padding: 10px 0 20px 0;
-    font-family: 'ProximaNova-Bold', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
     font-weight: bolder
 }
 .sect{
