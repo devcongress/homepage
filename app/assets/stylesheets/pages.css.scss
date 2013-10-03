@@ -31,87 +31,108 @@ img[alt="Devcongress"]{
     height: 40px
 }
 .nav.pull-right.navbar-nav{
-    margin-top: 20px;
+    margin-top: 20px
 }
 .sponsor-image {
     img{
         width: 100%;
-        height: auto;
+        height: auto
     }    
 }
+li>a:hover{
+    border-bottom: solid #16a085 7px;
+    /*border-bottom-right-radius: 5px;*/
+    /*border-bottom-left-radius: 5px;*/
+    color: #1abc9c !important
+}
 .center {
-    vertical-align: center;
+    vertical-align: center
 }
 .open-sans {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans'
 }
 .lato {
-    font-family: 'Lato', 'Calibri', Arial, sans-serif;
+    font-family: 'Lato', 'Calibri', Arial, sans-serif
 }
 .blue {
-    color: #3498db;
+    color: #3498db
 }
 .pink {
-    color: deeppink;
+    color: deeppink
 }
 .gray {
-    color: dimgray;
+    color: dimgray
 }
 @media screen and (min-width:40em) {
     .nav {
         margin: 0 0 3em;
-        padding: 0;
+        padding: 0
     }
     .nav li {
-        display: inline;
+        display: inline
     }
     .nav a {
         vertical-align: middle;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: 1px
     }
 }
 .appeal {
     a {
         text-decoration: underline;
-        font-weight: 700;
+        font-weight: 700
     }
 }
 .br10 {
-    border-radius: 8px;
+    border-radius: 8px
 }
 .btm-border {
     width: 70%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 3%;
-    border-bottom: 1px dashed transparentize(#f0a, .8);
+    border-bottom: 1px dashed transparentize(#f0a, .8)
 }
 .thankyou {
     font-size: 48px;
     font-family:  'Happy Monkey',  cursive;
-    padding-top:  10px;
+    padding-top:  10px
 }
 .context {
     font-size:  20px;
     font-weight:  300;
 }
 .thanktext {
-    padding-right:  -20px;
+    padding-right:  -20px
 }
 .proxima{
-    font-family: 'ProximaNova', sans-serif;
+    font-family: 'ProximaNova', sans-serif
 }
 .number{
     color: #3498db;
-    font-family: 'ProximaNova', sans-serif;
+    font-family: 'ProximaNova', sans-serif
 }
 .title{
-    padding: 10px 0 20px 0;
+    padding: 10px 0 25px 0;
     font-family: 'ProximaNova', sans-serif;
     font-weight: bolder
 }
 .sect{
-    height: 100%;
-    width: 100%;
+    padding-top: 100px
+}
+.goal-list{
+    padding-top: 60px
+}
+.event-logo{
+    text-align: center;
+    padding-bottom: 20px
+}
+.spon-text{
+    padding-bottom: 25px
+}
+img[alt="Techyafrica"]{
+    padding-top: 30px
+}
+.partner-list{
+    padding-left: 15px;
 }
