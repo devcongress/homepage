@@ -136,6 +136,22 @@ img[alt="Techyafrica"]{
 .partner-list{
     padding-left: 15px;
 }
-.team-border{
-    border-left: 1px solid #3498db
+
+@media screen and (min-width: 980px){
+    .team-border{
+        border-left: 1px solid #3498db
+    }
+    /*.nav{
+        text-align: center
+    }*/
+    /*.navbar-brand{
+        width: 100%;
+        height: auto
+    }*/
+    img[alt="Devcongress"]{
+        max-width: 100%;
+        height: auto
+    }
 }
+
+/*carousel magic*/

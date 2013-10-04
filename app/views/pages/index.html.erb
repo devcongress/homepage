@@ -1,7 +1,17 @@
 <div class="container content">
-	<div class="carousel">
-		
-	</div>
+	<!-- <div id="wrapper">
+		<div id="carousel">
+			<%= image_tag('building1.jpg') %>
+			<%= image_tag('building2.jpg') %>
+			<%= image_tag('building3.jpg') %>
+			<%= image_tag('building4.jpg') %>
+			<%= image_tag('building5.jpg') %>
+			<%= image_tag('building6.jpg') %>
+		</div>
+		<%= link_to ' ', '#', :'id' => 'prev', :'title' => 'Show previous' %>
+		<%= link_to ' ', '#', :'id' => 'next', :'title' => 'Show next' %>
+		<div id="pager"></div>
+	</div> -->
 	<div class="sect" id="about">
 		<div class="title col-md-offset-1">ABOUT</div>
 		<div class="summary">DevCongress is a budding developers movement aimed at becoming the most vibrant across the software developers space in Ghana and Africa. The objectives are very simple.</div>
@@ -43,7 +53,7 @@
 				<div class="event-description">
 					DevCongress is a developer conference held twice each year. At this event, we allow developers to share their knowledge through talks. No level of expertise is required, just a passion to share.
 					<span class="small">
-						<a href="#" class="read-more">Read more...</a>
+						<%= link_to 'Read more...', '/hack', :class => 'read-more'%>
 					</span>
 				</div>
 			</div>
@@ -52,7 +62,7 @@
 				<div class="event-title blue">Hackathon</div>
 				<div class="event-description">DevCongress hackathon is an event we run in collaboration with an organization. At these hackathons, we open up various APIs and open-source code for developers to build products within a 12-hour period.
 					<span class="small">
-						<a href="#" class="read-more">Read more...</a>
+						<%= link_to 'Read more...', '/hack', :class => 'read-more'%>
 					</span>
 				</div>
 			</div>
@@ -61,7 +71,7 @@
 				<div class="event-title blue">CodeCamp</div>
 				<div class="event-description">We believe in training teens to learn programming to gain problem-solving skills while building products they can make money from. CodeCamp is the event for just that.
 					<span class="small">
-						<a href="#" class="read-more">Read more...</a>
+						<%= link_to 'Read more...', '/hack', :class => 'read-more'%>
 					</span>
 				</div>
 			</div>
@@ -71,16 +81,16 @@
 		<div class="title col-md-offset-1">PARTNERS &amp; SPONSORS</div>
 		<p class="lato spon-text">We have received immense support from the following organisations on our previous events. We are grateful.</p>
 		<div class="row partner-list">
-			<div class="col-md-3">
+			<div class="col-md-3 col-xs-3">
 				<%= link_to image_tag('mest.png'), 'http://meltwater.org', :class => 'sponsor-image' %>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-xs-3">
 				<%= link_to image_tag('smsgh.png'), 'http://smsgh.com', :class => 'sponsor-image' %>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-xs-2">
 				<%= link_to image_tag('blogh.png'), 'http://bloggingghana.org', :class => 'sponsor-image' %>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-xs-3">
 				<%= link_to image_tag('techyafrica.png'), 'http://techy-africa.com', :class => 'sponsor-image techyafrica' %>
 			</div>
 		</div>
@@ -129,3 +139,26 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(function() {
+		$('#carousel').carouFredSel({
+			width: '100%',
+			items: {
+				visible: 3,
+				start: -1
+			},
+			scroll: {
+				items: 1,
+				duration: 1000,
+				timeoutDuration: 3000
+			},
+			prev: '#prev',
+			next: '#next',
+			pagination: {
+				container: '#pager',
+				deviation: 1
+			}
+		});
+	});
+</script>
