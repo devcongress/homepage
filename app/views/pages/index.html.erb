@@ -12,30 +12,39 @@
 		<%= link_to ' ', '#', :'id' => 'next', :'title' => 'Show next' %>
 		<div id="pager"></div>
 	</div> -->
+	<div class="sect">
+		<div id="owl-demo" class="owl-carousel owl-theme">
+	
+			<div class="item"><%= image_tag('building1.jpg') %></div>
+			<div class="item"><%= image_tag('building2.jpg') %></div>
+			<div class="item"><%= image_tag('building3.jpg') %></div>
+	
+		</div>
+	</div>
 	<div class="sect" id="about">
 		<div class="title col-md-offset-1">ABOUT</div>
 		<div class="summary">DevCongress is a budding developers movement aimed at becoming the most vibrant across the software developers space in Ghana and Africa. The objectives are very simple.</div>
 		<div class="goal-list">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 goal-div">
 					<div class="number">01</div>
 					<div class="goal">
 						To build confidence among software developers.
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 goal-div">
 					<div class="number">02</div>
 					<div class="goal">
 						Expose developers to a rich array of resources.
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 goal-div">
 					<div class="number">03</div>
 					<div class="goal">
 						Contribute to open source projects that have great social and economic impact.
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 goal-div">
 					<div class="number">04</div>
 					<div class="goal">
 						Harness the combined talent and resources of the local tech community to create solutions to national problems.
@@ -52,27 +61,27 @@
 				<div class="event-title blue">Developers' Conference</div>
 				<div class="event-description">
 					DevCongress is a developer conference held twice each year. At this event, we allow developers to share their knowledge through talks. No level of expertise is required, just a passion to share.
-					<span class="small">
-						<%= link_to 'Read more...', '/hack', :class => 'read-more'%>
-					</span>
+					<!-- <span class="small">
+						<%= link_to 'Read more...', '#', :class => 'read-more'%>
+					</span> -->
 				</div>
 			</div>
 			<div class="col-md-4 event">
 				<div class="event-logo">EventLogo</div>
 				<div class="event-title blue">Hackathon</div>
 				<div class="event-description">DevCongress hackathon is an event we run in collaboration with an organization. At these hackathons, we open up various APIs and open-source code for developers to build products within a 12-hour period.
-					<span class="small">
-						<%= link_to 'Read more...', '/hack', :class => 'read-more'%>
-					</span>
+					<!-- <span class="small">
+						<%= link_to 'Read more...', '#', :class => 'read-more'%>
+					</span> -->
 				</div>
 			</div>
 			<div class="col-md-4 event">
 				<div class="event-logo">EventLogo</div>
 				<div class="event-title blue">CodeCamp</div>
 				<div class="event-description">We believe in training teens to learn programming to gain problem-solving skills while building products they can make money from. CodeCamp is the event for just that.
-					<span class="small">
-						<%= link_to 'Read more...', '/hack', :class => 'read-more'%>
-					</span>
+					<!-- <span class="small">
+						<%= link_to 'Read more...', '#', :class => 'read-more'%>
+					</span> -->
 				</div>
 			</div>
 		</div>
@@ -141,24 +150,23 @@
 </div>
 
 <script type="text/javascript">
-	$(function() {
-		$('#carousel').carouFredSel({
-			width: '100%',
-			items: {
-				visible: 3,
-				start: -1
-			},
-			scroll: {
-				items: 1,
-				duration: 1000,
-				timeoutDuration: 3000
-			},
-			prev: '#prev',
-			next: '#next',
-			pagination: {
-				container: '#pager',
-				deviation: 1
-			}
-		});
-	});
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
 </script>

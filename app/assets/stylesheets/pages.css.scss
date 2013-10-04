@@ -120,6 +120,9 @@ li>a:hover{
 .sect{
     padding-top: 100px
 }
+.goal-div{
+    padding-bottom: 30px
+}
 .goal-list{
     padding-top: 60px
 }
@@ -137,21 +140,33 @@ img[alt="Techyafrica"]{
     padding-left: 15px;
 }
 
-@media screen and (min-width: 980px){
+@media screen and (min-width: 1024px){
     .team-border{
         border-left: 1px solid #3498db
     }
-    /*.nav{
-        text-align: center
-    }*/
-    /*.navbar-brand{
-        width: 100%;
-        height: auto
-    }*/
-    img[alt="Devcongress"]{
-        max-width: 100%;
-        height: auto
-    }
+    
 }
 
+/*@media screen and (min-device-width: 940px){
+    .team-border{
+        border-left: 1px solid #3498db
+    }
+    .nav{
+        text-align: center
+    }
+    .navbar-brand{
+        width: 100%;
+        height: auto
+    }
+    img[alt="Devcongress"]{
+        width: 100%;
+        height: auto
+    }
+}*/
+
 /*carousel magic*/
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
