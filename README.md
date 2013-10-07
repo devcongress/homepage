@@ -18,5 +18,5 @@
 	  o Us
 
 
-	$ dev-conf when
-	  24th August, 2013 at [Meltwater Entrepreneurial School of Technology](http://meltwater.org)
+	$ dev-conf hackathon
+	  Saturday, October 5, 2013 at iSpace Foundation, Osu, Accra.
