@@ -2,7 +2,6 @@ class Title < ActiveRecord::Base
 
   has_many :comments, dependent: :delete_all
 
-
   def self.order_by_number_of_comments_descending
     select('titles.*').
     joins(:comments).
