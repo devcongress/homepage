@@ -1,70 +1,70 @@
 <%= form_for [ @title, @comment ] do |f| %>
-	<% if @comment.errors.any? %>
-		<div class="errors_explanation">
-			<div class="alert alert-danger alert-block open-sans">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<h4 class="open-sans">Ok, so this is the trick.</h4>
-				<ul>
-					<% @comment.errors.full_messages.each do |msg| %>
-						<li class="error-message"><%= msg %></li>
-					<% end %>
-				</ul>
-			</div>
-		</div>
-	<% end %>
+    <% if @comment.errors.any? %>
+        <div class="errors_explanation">
+            <div class="alert alert-danger alert-block open-sans">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4 class="open-sans">Ok, so this is the trick.</h4>
+                <ul>
+                    <% @comment.errors.full_messages.each do |msg| %>
+                        <li class="error-message"><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    <% end %>
 
-	<div class="col-lg-6">
-		<div class="control-group">
-			<%= f.label :commenter_name, 'Your name' %><small class="gray"> (required)</small>
-			<div class="controls">
-				<div class="input-group">
-					<span class="input-group-addon input-small">
-						<i class="icon-user"></i>
-					</span>
-					<%= f.text_field :commenter_name, class: 'comment-input-name', :class => 'form-control input-small', id: 'comment-name' %>			
-				</div>
-			</div>
-			<br>
-		</div>
+    <div class="col-lg-6">
+        <div class="control-group">
+            <%= f.label :commenter_name, 'Your name' %><small class="gray"> (required)</small>
+            <div class="controls">
+                <div class="input-group">
+                    <span class="input-group-addon input-small">
+                        <i class="icon-user"></i>
+                    </span>
+                    <%= f.text_field :commenter_name, class: 'comment-input-name', :class => 'form-control input-small', id: 'comment-name' %>          
+                </div>
+            </div>
+            <br>
+        </div>
 
-		<div class="control-group">
-			<%= f.label :comment_body, 'Comment' %><small class="gray"> (required)</small>
-			<div class="controls">
-				<div class="input-group">
-					<span class="input-group-addon input-small">
-						<i class="icon-comments-alt"></i>
-					</span>
-					<%= f.text_area :comment_body,
-						class: 'comment-input-comment',
-						:class => 'form-control input-small',
-						id: 'comment-body',
-						rows: '5'
-					%>			
-				</div>
-			</div>
-			<br>
-		</div>
+        <div class="control-group">
+            <%= f.label :comment_body, 'Comment' %><small class="gray"> (required)</small>
+            <div class="controls">
+                <div class="input-group">
+                    <span class="input-group-addon input-small">
+                        <i class="icon-comments-alt"></i>
+                    </span>
+                    <%= f.text_area :comment_body,
+                        class: 'comment-input-comment',
+                        :class => 'form-control input-small',
+                        id: 'comment-body',
+                        rows: '5'
+                    %>          
+                </div>
+            </div>
+            <br>
+        </div>
 
-		<div class="control-group">
-			<%= f.label :commenter_name, 'Your website' %>
-			<div class="controls">
-				<div class="input-group">
-					<span class="input-group-addon input-small">
-						<i class="icon-globe"></i>
-					</span>
-					<%= f.url_field :commenter_website, class: 'comment-input-website', :class => 'form-control input-small', id: 'comment-website' %>
-				</div>
-				<span class="help-block">Prefix URL with 'http://'</span>
-			</div>
-			<br>
-		</div>
+        <div class="control-group">
+            <%= f.label :commenter_name, 'Your website' %>
+            <div class="controls">
+                <div class="input-group">
+                    <span class="input-group-addon input-small">
+                        <i class="icon-globe"></i>
+                    </span>
+                    <%= f.url_field :commenter_website, class: 'comment-input-website', :class => 'form-control input-small', id: 'comment-website' %>
+                </div>
+                <span class="help-block">Prefix URL with 'http://'</span>
+            </div>
+            <br>
+        </div>
 
-		<div class="control-group">
-			<br>
-			<div class="input-group form-last">
-					<%= f.submit 'Comment!', type: :submit, :class => 'btn btn-success' %>
-			</div>
-		</div>
+        <div class="control-group">
+            <br>
+            <div class="input-group form-last">
+                    <%= f.submit 'Comment!', type: :submit, :class => 'btn btn-success' %>
+            </div>
+        </div>
 
-	</div>
+    </div>
 <% end %>
