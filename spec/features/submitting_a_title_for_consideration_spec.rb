@@ -24,4 +24,4 @@
 # 		email.subject.should include '[DevCongress 24.08.13] Confirmation of Receipt'
 
 # 	end
-# end
+# # end
