@@ -21,6 +21,9 @@ class PagesController < ApplicationController
   def exchange
   end
 
+  def codecamp
+  end
+
   def say_thanks
     Notifier.thank_you
     render text: 'Ok, I\'m done saying thanks :/'

@@ -21,8 +21,10 @@ Devconf::Application.routes.draw do
   # match '/hack'           to: 'hackathon#index',        via: :get
   # match '/devcongress',   to: 'devcongress#index',      via: :get
 
-  get '/about'      =>  'pages#about'
-  get '/say_thanks' =>  'pages#say_thanks'
-  get '/hack'       =>  'pages#hack'
+  get '/about'      => 'pages#about'
+  get '/say_thanks' => 'pages#say_thanks'
+  get '/hack'       => 'pages#hack'
   get '/exchange'   => 'pages#exchange'
+  get '/codecamp'   => 'pages#codecamp'
+
 end
