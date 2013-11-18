@@ -4,10 +4,10 @@ class PagesController < ApplicationController
 
   def agenda
   end
-	
-	def reg
-		redirect_to register_path
-	end
+
+  def reg
+    redirect_to register_path
+  end
 
   def speakers
   end
@@ -18,10 +18,13 @@ class PagesController < ApplicationController
   def requirements
   end
 
-	def say_thanks
-		Notifier.thank_you
-		render text: 'Ok, I\'m done saying thanks :/'
-	end
+  def exchange
+  end
+
+  def say_thanks
+    Notifier.thank_you
+    render text: 'Ok, I\'m done saying thanks :/'
+  end
 
   def hack
     @hacker = Hacker.new
