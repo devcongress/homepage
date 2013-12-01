@@ -22,6 +22,7 @@ class PagesController < ApplicationController
   end
 
   def codecamp
+    render layout: 'codecamp'
   end
 
   def say_thanks
