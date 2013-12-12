@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_title, except: [ ]
+  before_action :set_title
 
   def index
   end
@@ -7,10 +7,8 @@ class CommentsController < ApplicationController
   def create
     @comment = @title.comments.build comment_params
     if @comment.save
-      # flash[:notice] = 'Comment added.'
       redirect_to @title
     else
-      # flash[:alert] = 'Oops! Your comment couldn\'t be saved.'
       render 'titles/show'
     end
   end
