@@ -15,7 +15,7 @@ class AttendeesController < ApplicationController
       redirect_to agenda_path
     else
       # flash[:alert] = 'Ouch, your registration failed. Let\'s give it another shot'
-      render 'new'
+      render :new
       # nothing, yet
     end
   end
