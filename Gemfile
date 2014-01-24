@@ -28,6 +28,7 @@ end
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'meta_request'
+  gem 'spring'
 end
 
 group :test do
