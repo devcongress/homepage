@@ -8,5 +8,6 @@ Devconf::Application.routes.draw do
 
   get '/exchange'   => 'pages#exchange'
   get '/codecamp'   => 'pages#codecamp'
+  get '/thanks'		=> 'pages#thankyou'
 
 end
