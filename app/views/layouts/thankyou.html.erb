@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= render 'layouts/scripts_and_styles' %>
+    <style>
+        body{
+            background-color: white
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="flash container">
+            <% flash.each do |key, value| %>
+                <div class="alert alert-success alert-block open-sans  <%= key %>" id="<%= value %>">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4 class="open-sans"><%= value %></h4>
+                </div>
+            <% end %>
+        </div>
+
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/footer_scripts' %>
+    <script>
+        $(document).snowfall({flakeCount : 800, maxSpeed : 5, maxSize : 5});
+    </script>
+</body>
+</html>
