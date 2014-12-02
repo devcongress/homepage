@@ -1,14 +1,13 @@
 <div class="container content">
-    <!-- <div id="wrapper">
-        <div id="carousel">
-            <%= image_tag('building1.jpg') %>
-            <%= image_tag('building2.jpg') %>
-            <%= image_tag('building3.jpg') %>
-        </div>
-        <%= link_to ' ', '#', :'id' => 'prev', :'title' => 'Show previous' %>
-        <%= link_to ' ', '#', :'id' => 'next', :'title' => 'Show next' %>
-    </div> -->
+
     <div class="sect" id="vimeo-hd"><iframe width="800" height="480" src="//www.youtube.com/embed/6QQe7wvqJ2k" frameborder="0" allowfullscreen></iframe></div>
+
+    <!-- quick section about latest post from devcongress news. 
+
+    <section>
+        Latest news here.
+    </section>
+     -->
     <div class="sect" id="about">
         <div class="title col-md-offset-1">ABOUT</div>
         <div class="summary">DevCongress is a budding developers movement aimed at becoming the most vibrant across the software developers space in Ghana and Africa. The objectives are very simple.</div>
@@ -44,7 +43,17 @@
     <div class="sect" id="projects">
         <div class="title col-md-offset-1">PROJECTS &amp; EVENTS</div>
         <div class="row">
-            <div class="col-md-4 event">
+            <div class="col-md-3 event">
+<!--                <div class="event-logo">EventLogo</div>
+ -->                <div class="event-title blue">DevCongress eXchange <span class="label label-danger">New</span> </div>
+                <div class="event-description">
+                    What tricks do the expert developers know that we're not aware of? eXchange is a Google+ Hangout series where we meet and talk to seasoned developers about their tools, workflow and their lives. <a href="http://exchange.devcongress.com">Find out more...</a>
+                    <!-- <span class="small">
+                        <%= link_to 'Read more...', '#', :class => 'read-more'%>
+                    </span> -->
+                </div>
+            </div>
+            <div class="col-md-3 event">
 <!--                <div class="event-logo">EventLogo</div>
  -->                <div class="event-title blue">Developers' Conference</div>
                 <div class="event-description">
@@ -54,7 +63,7 @@
                     </span> -->
                 </div>
             </div>
-            <div class="col-md-4 event">
+            <div class="col-md-3 event">
 <!--                <div class="event-logo">EventLogo</div>
  -->                <div class="event-title blue">Hackathon</div>
                 <div class="event-description">DevCongress hackathon is an event we run in collaboration with an organization. At these hackathons, we open up various APIs and open-source code for developers to build products within a 12-hour period.
@@ -63,7 +72,7 @@
                     </span> -->
                 </div>
             </div>
-            <div class="col-md-4 event">
+            <div class="col-md-3 event">
 <!--                <div class="event-logo">EventLogo</div>
  -->                <div class="event-title blue">CodeCamp</div>
                 <div class="event-description">We believe in training teens to learn programming to gain problem-solving skills while building products they can make money from. CodeCamp is the event for just that.
@@ -78,7 +87,7 @@
         <div class="title col-md-offset-1">PARTNERS &amp; SPONSORS</div>
         <p class="lato spon-text">We have received immense support from the following organisations on our previous events. We are grateful.</p>
         <div class="row partner-list">
-            <div class="col-md-3 col-xs-3">
+            <div class="col-md-3 col-xs-3 col-xs-offset-3 col-md-offset-3">
                 <%= link_to image_tag('mest.png'), 'http://meltwater.org', :class => 'sponsor-image' %>
             </div>
             <div class="col-md-3 col-xs-3">
@@ -92,15 +101,15 @@
                 <div class="title col-md-offset-2">CONTACT</div>
                 <dl class="dl-horizontal">
                     <dt>twitter</dt>
-                    <dd>@DevCongress</dd>
+                    <dd><a href="http:/twitter.com/devcongress">@DevCongress</a></dd>
                     <dt>G+</dt>
-                    <dd>gplus.to/devcongress</dd>
+                    <dd><a href="http://google.com/+DevCongress">+DevCongress</a></dd>
                     <dt>facebook</dt>
-                    <dd>/DevCongress</dd>
+                    <dd><a href="http://facebook.com/devcongress">/DevCongress</a></dd>
                     <dt>YouTube</dt>
-                    <dd>/DevCongress</dd>
+                    <dd><a href="http://youtube.com/devcongress">/DevCongress</a></dd>
                     <dt>GMail</dt>
-                    <dd>devcongress@gmail.com</dd>
+                    <dd><a href="mailto:devcongress@gmail.com">devcongress@gmail.com</a></dd>
                 </dl>
             </div>
         </div>
@@ -109,20 +118,20 @@
                 <div class="title col-md-offset-2">TEAM</div>
                 <div class="founders">
                     <dl class="dl-horizontal">
-                        <!-- <dt>icon</dt> -->
+                        <dt><%= link_to image_tag('yaw.jpg'), 'http://yawboakye.com', :class => 'founder-image' %></dt>
                         <dd>
                             <span><a href="http://yawboakye.com">Yaw Boakye</a></span>
                             <p>Abstractionist. Rudely opinionated. I'm fond of philosophy and cats.</p>
                         </dd>
-                        <!-- <dt>icon</dt> -->
+                        <dt><%= link_to image_tag('elorm.jpeg'), 'http:twitter.com/elormadjaho', :class => 'founder-image' %></dt>
                         <dd>
                             <span>Elorm Adjaho (<a href="http://twitter.com/elormadjaho">@elormadjaho</a>)</span>
                             <p>Bachelors in Fine Arts, Event Organiser, Writer, Visionary</p>
                         </dd>
-                        <!-- <dt>icon</dt> -->
+                        <dt><%= link_to image_tag('claude.jpg'), 'http://ayitey.me', :class => 'founder-image' %></dt>
                         <dd>
                             <span>Claude Ayitey (<a href="http://twitter.com/mrayitey">@MrAyitey</a>)</span>
-                            <p>Bachelors in Computer Science, Blogger, UI/UX, Social Media</p>
+                            <p>UX Designer, Bachelors in Computer Science, Blogger, Social Media Maven</p>
                         </dd>
                     </dl>
                 </div>

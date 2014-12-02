@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   def index
   end
 
-  def agenda
+  def thankyou
+    render layout: 'thankyou'
   end
 
   def exchange

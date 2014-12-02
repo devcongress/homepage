@@ -31,7 +31,7 @@ img[alt="Devcongress"]{
     height: 40px
 }
 .nav.pull-right.navbar-nav{
-    margin-top: 20px
+    margin-top: 10px
 }
 .sponsor-image {
     img{
@@ -39,8 +39,17 @@ img[alt="Devcongress"]{
         height: auto
     }    
 }
+
+li a{
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
 li>a:hover{
-    border-bottom: solid #16a085 7px;
+    border-bottom: solid #16a085 5px;
     /*border-bottom-right-radius: 5px;*/
     /*border-bottom-left-radius: 5px;*/
     color: #1abc9c !important
@@ -66,6 +75,13 @@ li>a:hover{
 .gray {
     color: dimgray
 }
+.founder-image{
+    img{
+        width: 75px;
+        height: 75px;
+    }
+}
+
 @media screen and (min-width:40em) {
     .nav {
         margin: 0 0 3em;
@@ -166,10 +182,3 @@ img[alt="Techyafrica"]{
         height: auto
     }
 }*/
-
-/*carousel magic*/
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
