@@ -9,9 +9,10 @@ Devconf::Application.routes.draw do
   # get '/exchange'   => 'pages#exchange'
   get '/codecamp'   => 'pages#codecamp'
   get '/thanks'		=> 'pages#thankyou'
+  get '/slack'    => redirect('http://slack.devcongress.org')
   get '/smsghcop' => redirect('/smsghcop.html')
   get '/news'		=> redirect('https://gharage.com')
-  get '/forge'		=> redirect('http://forge.devcongress.com')
-  get '/exchange'	=> redirect('http://exchange.devcongress.com')
+  get '/forge'		=> redirect('http://forge.devcongress.org')
+  get '/exchange'	=> redirect('http://exchange.devcongress.org')
 
 end
