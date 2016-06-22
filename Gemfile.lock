@@ -157,6 +157,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    turbolinks (2.5.3)
+      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -180,6 +182,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   spring
+  turbolinks
   uglifier
 
 RUBY VERSION
