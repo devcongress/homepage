@@ -18,12 +18,12 @@ gem 'rails-observers'
 
 group :production do
 	gem 'rails_12factor'
-	gem 'pg'
+	gem 'pg', '~> 1.0'
 end
 
 group :development, :test do
 	gem 'rspec-rails'
-  gem 'spring'
+    gem 'spring'
 end
 
 group :test do

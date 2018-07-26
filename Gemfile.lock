@@ -203,7 +203,7 @@ DEPENDENCIES
   email_spec
   jbuilder (~> 2.7)
   jquery-rails
-  pg
+  pg (~> 1.0)
   rails (~> 5.2)
   rails-observers
   rails_12factor
