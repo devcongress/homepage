@@ -4,6 +4,8 @@ ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2'
 
+gem 'sqlite3'
+
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '~> 4.1', '>= 4.1.16'
 gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
@@ -16,6 +18,7 @@ gem 'rails-observers'
 
 group :production do
 	gem 'rails_12factor'
+	gem 'pg'
 end
 
 group :development, :test do
