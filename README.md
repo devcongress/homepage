@@ -1,8 +1,9 @@
 # Developers Congress
 	$ dev-conf founders
-	  Yaw @22bytes
+	  Yaw @ejnbo
 	  Elorm @elormadjaho
 	  Claude @MrAyitey
+    Kirk Saviour @savekirk
 
 
 	$ dev-conf objectives
@@ -16,7 +17,3 @@
 	  o You
 	  o Me
 	  o Us
-
-
-	$ dev-conf hackathon
-	  Saturday, October 5, 2013 at iSpace Foundation, Osu, Accra.
