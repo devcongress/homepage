@@ -1,4 +1,4 @@
-class CreateVolunteers < ActiveRecord::Migration
+class CreateVolunteers < ActiveRecord::Migration[5.2]
   def change
     create_table :volunteers do |t|
       t.string :firstname
@@ -13,6 +13,7 @@ class CreateVolunteers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :volunteers, :email_address, :unique
+    # add_index :volunteers, :email_address, :unique
+    add_index :volunteers, :email_address
   end
 end

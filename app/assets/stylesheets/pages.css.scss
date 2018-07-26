@@ -2,12 +2,14 @@ html {
     overflow-y: scroll;
     height: 100%;
 }
+
 body {
     height: 100%
 }
+
 .main {
     min-height: 100%;
-    height:100%;
+    height: 100%;
     height: auto !important;
     margin: 0 auto -100px;
     padding: 0 0 60px;
@@ -15,70 +17,87 @@ body {
     color: #34495e;
     font-family: 'Lato', 'Calibri', Arial, sans-serif;
     font-size: 18px;
-    font-weight: 300; 
+    font-weight: 300;
 }
+
 .footer {
     height: 100px;
     background-color: #fff3df;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
     text-decoration: none;
 }
-.navbar-default{
+
+.navbar-default {
     font-family: 'ProximaNova', sans-serif;
 }
-img[alt="Devcongress"]{
+
+img[alt="Devcongress"],
+.navbar-brand img {
     height: 40px
 }
-.nav.pull-right.navbar-nav{
+
+.nav.pull-right.navbar-nav {
     margin-top: 10px
 }
+
 .sponsor-image {
-    img{
+    img {
         width: 100%;
         height: auto
-    }    
+    }
 }
 
-li a{
+li a {
     -webkit-transition: all .25s ease;
-       -moz-transition: all .25s ease;
-        -ms-transition: all .25s ease;
-         -o-transition: all .25s ease;
-            transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
 }
 
-li>a:hover{
+li>a:hover {
     border-bottom: solid #16a085 5px;
     /*border-bottom-right-radius: 5px;*/
     /*border-bottom-left-radius: 5px;*/
     color: #1abc9c !important
 }
-#vimeo-hd{
+
+#vimeo-hd {
     text-align: center;
 }
+
 .center {
     vertical-align: center
 }
+
 .open-sans {
     font-family: 'Open Sans'
 }
+
 .lato {
     font-family: 'Lato', 'Calibri', Arial, sans-serif
 }
+
 .blue {
     color: #3498db
 }
+
 .pink {
     color: deeppink
 }
+
 .gray {
     color: dimgray
 }
-.founder-image{
-    img{
-        width: 75px;
-        height: 75px;
+
+.admin-image {
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px
     }
 }
 
@@ -96,15 +115,18 @@ li>a:hover{
         letter-spacing: 1px
     }
 }
+
 .appeal {
     a {
         text-decoration: underline;
         font-weight: 700
     }
 }
+
 .br10 {
     border-radius: 8px
 }
+
 .btm-border {
     width: 70%;
     margin: 0 auto;
@@ -112,59 +134,80 @@ li>a:hover{
     padding-bottom: 3%;
     border-bottom: 1px dashed transparentize(#f0a, .8)
 }
+
 .thankyou {
     font-size: 48px;
-    font-family:  'Happy Monkey',  cursive;
-    padding-top:  10px
+    font-family: 'Happy Monkey', cursive;
+    padding-top: 10px
 }
+
 .context {
-    font-size:  20px;
-    font-weight:  300;
+    font-size: 20px;
+    font-weight: 300;
 }
+
 .thanktext {
-    padding-right:  -20px
+    padding-right: -20px
 }
-.proxima{
+
+.proxima {
     font-family: 'ProximaNova', sans-serif
 }
-.number{
+
+.number {
     color: #3498db;
     font-family: 'ProximaNova', sans-serif
 }
-.title{
+
+.title {
     padding: 10px 0 25px 0;
     font-family: 'ProximaNova', sans-serif;
     font-weight: bolder
 }
-.sect{
+
+.sect {
     padding-top: 100px
 }
-.goal-div{
+
+.goal-div {
     padding-bottom: 30px
 }
-.goal-list{
+
+.goal-list {
     padding-top: 60px
 }
-.event-logo{
+
+.event-logo {
     text-align: center;
     padding-bottom: 20px
 }
-.spon-text{
+
+.spon-text {
     padding-bottom: 25px
 }
-img[alt="Techyafrica"]{
+
+img[alt="Techyafrica"] {
     padding-top: 30px
 }
-.partner-list{
+
+.partner-list {
     padding-left: 15px;
 }
 
-@media screen and (min-width: 1024px){
-    .team-border{
+dd span {
+    font-weight: 400;
+}
+
+dd p {
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 1024px) {
+    .team-border {
         border-left: 1px solid #3498db
     }
-    
 }
+
 
 /*@media screen and (min-device-width: 940px){
     .team-border{
