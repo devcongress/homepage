@@ -4,7 +4,6 @@ ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2'
 
-gem 'sqlite3'
 
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '~> 4.1', '>= 4.1.16'
@@ -22,6 +21,7 @@ group :production do
 end
 
 group :development, :test do
+	gem 'sqlite3'
 	gem 'rspec-rails'
     gem 'spring'
 end
